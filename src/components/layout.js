@@ -3,13 +3,10 @@ import Navbar from "./Navbar";
 
 const Layout = ({ pageTitle, children }) => {
   return (
-    <div className="m-auto max-w-lg font-sans">
+    <div className="m-auto font-sans">
       <Navbar />
       <title>{pageTitle}</title>
-      <main>
-        <h1 className="text-purple-700 text-xl">{pageTitle}</h1>
-        {children}
-      </main>
+      <main>{children}</main>
     </div>
   );
 };

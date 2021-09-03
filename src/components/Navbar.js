@@ -1,31 +1,35 @@
 import * as React from "react";
+import NavbarItem from "./NavbarItem";
+import logo from "../images/navbarLogo.svg";
 import { Link } from "gatsby";
 
 const Navbar = () => {
   return (
-    <nav>
-      <ul className="flex list-none pl-0">
-        <li className="pr-8">
-          <Link to="/" className="text-black">
-            Home
+    <nav className="bg-blue-light">
+      <div className="container mx-auto">
+        <div className="sm:flex justify-around h-16">
+          {/* site title */}
+          <Link to="/">
+            <img src={logo} alt="navbar-logo" width="50" className="pt-2"></img>
           </Link>
-        </li>
-        <li className="pr-8">
-          <Link to="/about" className="text-black">
-            About
-          </Link>
-        </li>
-        <li className="pr-8">
-          <Link to="/program" className="text-black">
-            Program
-          </Link>
-        </li>
-        <li className="pr-8">
-          <Link to="/blog" className="text-black">
-            Blog
-          </Link>
-        </li>
-      </ul>
+
+          {/* nav items */}
+          <ul className="text-black sm:self-center text-base border-t sm:border-none">
+            <NavbarItem pageLink="/" pageTitle="Home"></NavbarItem>
+            <NavbarItem pageLink="/about" pageTitle="About"></NavbarItem>
+            <NavbarItem pageLink="/program" pageTitle="Program"></NavbarItem>
+            <NavbarItem pageLink="/blog" pageTitle="Blog"></NavbarItem>
+            <li className="sm:inline-block">
+              <a
+                href="https://mentorcenter.us/"
+                className="text-black hover:text-blue-dark text-base"
+              >
+                Mentors
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </nav>
   );
 };
