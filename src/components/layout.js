@@ -3,7 +3,7 @@ import Navbar from "./Navbar";
 
 const Layout = ({ pageTitle, children }) => {
   return (
-    <div className="m-auto font-sans">
+    <div class="m-auto font-sans">
       <Navbar />
       <title>{pageTitle}</title>
       <main>{children}</main>

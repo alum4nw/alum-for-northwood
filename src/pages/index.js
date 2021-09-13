@@ -1,11 +1,15 @@
 import * as React from "react";
-import Hero from "../components/Hero.js";
 import Layout from "../components/Layout.js";
+import Hero from "../components/Hero.js";
+import Mission from "../components/Mission.js";
+import UpcomingEvents from "../components/UpcomingEvents.js";
 
 const IndexPage = () => {
   return (
     <Layout pageTitle="Home">
       <Hero></Hero>
+      <Mission></Mission>
+      <UpcomingEvents></UpcomingEvents>
     </Layout>
   );
 };
