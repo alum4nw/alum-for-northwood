@@ -4,7 +4,7 @@ import Layout from "../components/Layout";
 const AboutPage = () => {
   return (
     <Layout pageTitle="About">
-      <p class="text-noto">I am creator.</p>
+      <p className="text-noto">I am creator.</p>
     </Layout>
   );
 };

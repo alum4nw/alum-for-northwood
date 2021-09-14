@@ -7,9 +7,9 @@ import UpcomingEvents from "../components/UpcomingEvents.js";
 const IndexPage = () => {
   return (
     <Layout pageTitle="Home">
-      <Hero></Hero>
-      <Mission></Mission>
-      <UpcomingEvents></UpcomingEvents>
+      <Hero />
+      <Mission />
+      <UpcomingEvents />
     </Layout>
   );
 };
