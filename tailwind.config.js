@@ -11,16 +11,16 @@ module.exports = {
         body: "1rem",
         small: "0.75rem",
       },
-    },
-    colors: {
-      white: "#faf7f2",
-      blue: {
-        lightest: "#d1e1ff",
-        light: "#9ec0ff",
-        DEFAULT: "#578aef",
-        dark: "#3a5ea6",
+      colors: {
+        white: "#faf7f2",
+        blue: {
+          lightest: "#d1e1ff",
+          light: "#9ec0ff",
+          DEFAULT: "#578aef",
+          dark: "#3a5ea6",
+        },
+        black: "#020e0d",
       },
-      black: "#020e0d",
     },
     fontFamily: {
       body: ["Noto Sans TC"],
@@ -28,7 +28,9 @@ module.exports = {
     },
   },
   variants: {
-    extend: {},
+    extend: {
+      fill: ["hover", "focus"],
+    },
   },
   plugins: ["gatsby-plugin-postcss"],
 };

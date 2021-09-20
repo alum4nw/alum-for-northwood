@@ -1,9 +1,9 @@
 import * as React from "react";
 import NavbarItem from "./NavbarItem";
-import logo from "../images/navbarLogo.svg";
-import arrow from "../images/mentorArrow.svg";
+import Logo from "../images/navbarLogo.svg";
+import MentorArrow from "../images/mentorArrow.svg";
 import { Link } from "gatsby";
-import ButtonLight from "./ButtonLight";
+import ButtonDark from "./ButtonDark";
 
 const Navbar = () => {
   return (
@@ -11,8 +11,8 @@ const Navbar = () => {
       <div className="px-14">
         <div className="flex justify-between h-16">
           {/* site title */}
-          <Link to="/">
-            <img src={logo} alt="navbar-logo" width="50" className="pt-2"></img>
+          <Link to="/" className="group">
+            <Logo className="pt-2 h-14" />
           </Link>
 
           {/* nav items */}
@@ -21,21 +21,21 @@ const Navbar = () => {
             <NavbarItem pageLink="/about" pageTitle="About"></NavbarItem>
             <NavbarItem pageLink="/program" pageTitle="Program"></NavbarItem>
             <NavbarItem pageLink="/blog" pageTitle="Blog"></NavbarItem>
-            <li className="sm:inline-block">
+            <li className="sm:inline-block group">
               <a
                 href="https://mentorcenter.us/"
-                className="text-black hover:text-blue-dark font-body text-base flex flex-row items-center justify-center"
+                className="text-black group-hover:text-white font-body text-base flex flex-row items-center justify-center"
               >
                 Mentors
-                <img
-                  src={arrow}
-                  alt="mentor-arrow"
-                  className="p-2 hover:text-blue-dark"
-                ></img>
+                <MentorArrow className="ml-1 mt-1" />
               </a>
             </li>
-            <li className="sm:inline-block pl-7">
-              <ButtonLight>Register</ButtonLight>
+            <li className="sm:inline-block pl-9">
+              <ButtonDark
+                padding="py-2 px-5"
+                textSize="text-body"
+                description="Register"
+              />
             </li>
           </ul>
         </div>
