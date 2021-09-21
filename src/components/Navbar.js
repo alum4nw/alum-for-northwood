@@ -1,9 +1,9 @@
 import * as React from "react";
 import NavbarItem from "./NavbarItem";
-import Logo from "../images/navbarLogo.svg";
-import MentorArrow from "../images/mentorArrow.svg";
+import Logo from "../svg/navbarLogo.svg";
+import MentorArrow from "../svg/mentorArrow.svg";
 import { Link } from "gatsby";
-import ButtonDark from "./ButtonDark";
+import Button from "./Button";
 
 const Navbar = () => {
   return (
@@ -31,7 +31,7 @@ const Navbar = () => {
               </a>
             </li>
             <li className="sm:inline-block pl-9">
-              <ButtonDark
+              <Button
                 padding="py-2 px-5"
                 textSize="text-body"
                 description="Register"

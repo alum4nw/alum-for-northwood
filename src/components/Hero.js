@@ -1,7 +1,7 @@
 import * as React from "react";
-import ButtonDark from "./ButtonDark";
-import Illustration from "../images/heroIllustration.svg";
-import Clouds from "../images/clouds.svg";
+import Button from "./Button";
+import Illustration from "../svg/heroIllustration.svg";
+import Clouds from "../svg/clouds.svg";
 
 const Hero = () => {
   return (
@@ -15,7 +15,7 @@ const Hero = () => {
           <h3 className="font-body text-h4 pb-14">
             Short catchphrase about this long
           </h3>
-          <ButtonDark
+          <Button
             padding="py-4 px-6"
             textSize="text-h4"
             description="Register now!"
