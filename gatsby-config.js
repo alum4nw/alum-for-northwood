@@ -7,8 +7,14 @@ module.exports = {
     "gatsby-plugin-gatsby-cloud",
     "gatsby-plugin-image",
     "gatsby-plugin-sharp",
-    "gatsby-plugin-transformer-sharp",
-    "gatsby-source-filesystem",
+    "gatsby-transformer-sharp",
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `pages`,
+        path: `${__dirname}/src/pages/`,
+      },
+    },
     "gatsby-plugin-styled-components",
     "gatsby-plugin-postcss",
     {
