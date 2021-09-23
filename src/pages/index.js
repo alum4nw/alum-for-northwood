@@ -1,5 +1,5 @@
 import * as React from "react";
-import Layout from "../components/Layout.js";
+import Layout from "/src/components/Layout.js";
 import Hero from "../components/Hero.js";
 import Mission from "../components/Mission.js";
 import UpcomingEvents from "../components/UpcomingEvents.js";
