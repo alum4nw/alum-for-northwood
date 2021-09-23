@@ -25,7 +25,7 @@ const LearnMore = () => {
           <AboutCard
             image={
               <StaticImage
-                src="../images/ourProgram.png"
+                src="../images/ourTeam.png"
                 alt="our-program"
                 className="border border-black"
               />
@@ -42,7 +42,7 @@ const LearnMore = () => {
           <AboutCard
             image={
               <StaticImage
-                src="../images/ourProgram.png"
+                src="../images/ourMentors.png"
                 alt="our-program"
                 className="border border-black"
               />

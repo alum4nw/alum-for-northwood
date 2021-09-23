@@ -13,7 +13,7 @@ const Hero = () => {
             ALUM for Northwood
           </h1>
           <h3 className="font-body text-h4 pb-14">
-            Short catchphrase about this long
+            Building a community through alumni mentorship.
           </h3>
           <Button
             padding="py-4 px-6"

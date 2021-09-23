@@ -20,7 +20,6 @@ const UpcomingSummer = () => {
         <StaticImage
           src="../images/mentorMeetings.png"
           alt="mentor-mentee"
-          width="433"
           height="274"
         />
         <div className="flex flex-col items-center space-y-4 max-w-md">
