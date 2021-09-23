@@ -1,6 +1,6 @@
 import * as React from "react";
-import Layout from "../components/Layout.js";
 import Hero from "../components/Hero.js";
+import Layout from "../components/Layout.js";
 import Mission from "../components/Mission.js";
 import UpcomingEvents from "../components/UpcomingEvents.js";
 import UpcomingSummer from "../components/UpcomingSummer.js";
