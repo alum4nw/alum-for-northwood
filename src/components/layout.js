@@ -1,6 +1,6 @@
 import * as React from "react";
-import Navbar from "./Navbar";
-import Footer from "./Footer";
+import Navbar from "./Navbar.js";
+import Footer from "./Footer.js";
 
 const Layout = ({ pageTitle, children }) => {
   return (
