@@ -15,8 +15,8 @@ const Footer = () => {
   };
 
   return (
-    <div className="bg-white flex justify-between font-body px-16 border-t border-black border-opacity-30">
-      <div className="text-small py-6">
+    <div className="bg-white flex justify-between font-body px-16 py-6 border-t border-black border-opacity-30">
+      <div className="text-small">
         <p>ALUM is a registered 501c3 nonprofit corporation</p>
         <FooterLink href="https://www.ca.gov/">
           Articles of Incorporation & Determination Letter
@@ -26,7 +26,7 @@ const Footer = () => {
         </p>
         <p>Not affiliated with Northwood High School</p>
       </div>
-      <div className="text-right text-body py-8 space-y-2">
+      <div className="text-right text-body flex flex-col justify-between py-3">
         <FooterLink href="mailto:contact@alumfornorthwood.org">
           contact@alumfornorthwood.org
         </FooterLink>
