@@ -15,7 +15,7 @@ const EventCard = () => {
 
   return (
     <div className="container p-9 w-96 group">
-      <div className="bg-white flex flex-col text-left border border-black rounded-xl p-6">
+      <div className="bg-white flex flex-col text-left border border-black rounded-xl p-6 hover:shadow-custom">
         <h4 className="text-blue-dark font-body text-h4 group-hover:text-blue">
           Event Name
         </h4>
