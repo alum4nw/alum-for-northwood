@@ -24,6 +24,9 @@ module.exports = {
       boxShadow: {
         custom: "4px 4px 4px rgba(0, 0, 0, 0.25)",
       },
+      width: {
+        "3/10": "30%",
+      },
     },
     fontFamily: {
       body: ["Noto Sans TC"],
