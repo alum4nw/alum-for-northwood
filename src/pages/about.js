@@ -1,10 +1,13 @@
 import * as React from "react";
 import PageLayout from "../components/PageLayout.js";
+import AboutALUM from "../components/AboutALUM.js";
+import Team from "../components/Team.js";
 
 const AboutPage = () => {
   return (
     <PageLayout pageTitle="About">
-      <p className="text-noto">I am creator.</p>
+      <AboutALUM />
+      <Team />
     </PageLayout>
   );
 };
