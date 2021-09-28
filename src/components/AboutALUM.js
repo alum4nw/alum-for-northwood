@@ -1,14 +1,15 @@
 import * as React from "react";
 import { Link } from "gatsby";
 import ArrowIcon from "../svg/arrowIcon.svg";
-import { StaticImage } from "gatsby-plugin-image";
+import LeftPole from "../svg/leftPole.svg";
+import RightPole from "../svg/rightPole.svg";
 
 const AboutALUM = () => {
   return (
     <div className="bg-blue-lightest pt-16">
       <h2 className="font-header text-h2 text-center">About ALUM</h2>
       <div className="flex flex-row items-center justify-center">
-        <StaticImage src="../images/leftPole.png" />
+        <LeftPole />
         <div className="w-1/2 px-14 space-y-6 mb-14">
           <p className="font-body text-body">
             Hey there! We’re ALUM. In March 2020, we were just a few college
@@ -46,7 +47,7 @@ const AboutALUM = () => {
             united by our shared experiences. Go T-wolves!
           </p>
         </div>
-        <StaticImage src="../images/rightPole.png" />
+        <RightPole />
       </div>
     </div>
   );
