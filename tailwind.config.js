@@ -25,6 +25,7 @@ module.exports = {
         custom: "4px 4px 4px rgba(0, 0, 0, 0.25)",
       },
       width: {
+        "1/10": "10%",
         "3/10": "30%",
       },
     },
