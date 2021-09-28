@@ -1,7 +1,7 @@
 import * as React from "react";
 import { Link } from "gatsby";
-import { StaticImage } from "gatsby-plugin-image";
 import ArrowIcon from "../svg/arrowIcon.svg";
+import PathwaysWolf from "../svg/pathwaysWolf.svg";
 
 const ProgramHeader = () => {
   return (
@@ -34,7 +34,7 @@ const ProgramHeader = () => {
             become mentors for life.
           </p>
         </div>
-        <StaticImage src="../images/pathwaysWolf.png" className="w-3/10" />
+        <PathwaysWolf />
       </div>
     </div>
   );

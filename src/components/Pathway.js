@@ -1,10 +1,10 @@
 import * as React from "react";
-import { StaticImage } from "gatsby-plugin-image";
+import EngPathway from "../svg/engPathway.svg";
 
 const Pathway = () => {
   return (
     <div className="flex flex-row w-2/3 justify-center items-center py-10">
-      <StaticImage src="../images/engPathway.png" className="w-1/4" />
+      <EngPathway />
       <div className="w-2/3 pl-28">
         <h4 className="text-h4 font-body pb-3">Engineering Pathway</h4>
         <p className="text-body font-body">

@@ -1,16 +1,18 @@
 import * as React from "react";
 import { StaticImage } from "gatsby-plugin-image";
+import PencilPaperclip from "../svg/pencilPaperclip.svg";
+import Gavel from "../svg/gavel.svg";
 
 const MenteeSpotlight = () => {
   return (
     <div className="bg-blue-lightest flex flex-col py-16 justify-center items-center">
       <h2 className="text-h2 font-header">Meet Mentee Mia Lee!</h2>
-      <div className="py-11 flex flex-row justify-center items-center">
-        <StaticImage src="../images/pencil.png" className="w-1/12" />
-        <div className="px-11 w-1/4">
+      <div className="py-11 flex flex-row justify-center items-center ">
+        <PencilPaperclip className="w-1/4" />
+        <div className="px-11 w-5/12">
           <StaticImage src="../images/menteeSpotlight.png" />
         </div>
-        <StaticImage src="../images/gavel.png" className="w-1/10" />
+        <Gavel className="w-1/4" />
       </div>
       <p className="font-body text-body w-1/2">
         "I initially joined ALUM because it seemed like an interesting
