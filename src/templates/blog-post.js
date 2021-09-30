@@ -14,7 +14,12 @@ const BlogPostTemplate = ({ data }) => {
           <p className="text-body font-body font-bold">
             Written by {post.author} • {post.date}
           </p>
-          <p className="text-body font-body">{post.content.content}</p>
+          <div
+            className="text-body font-body"
+            dangerouslySetInnerHTML={{
+              __html: post.content.childMarkdownRemark.html,
+            }}
+          />
         </div>
       </div>
     </PageLayout>
@@ -29,7 +34,9 @@ export const pageQuery = graphql`
       author
       title
       content {
-        content
+        childMarkdownRemark {
+          html
+        }
       }
       date(formatString: "MMMM DD, YYYY")
       photo {

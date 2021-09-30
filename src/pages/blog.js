@@ -12,7 +12,6 @@ const BlogPage = ({ data }) => {
           {data.allContentfulBlogPost.edges.map(({ node, index }) => (
             <Link
               to={`/blog/${node.slug}/`}
-              key={index}
               className="flex flex-row w-2/3 xl:items-center py-10 border-b last:border-b-0 group"
             >
               <GatsbyImage image={getImage(node.photo)} alt={node.slug} />

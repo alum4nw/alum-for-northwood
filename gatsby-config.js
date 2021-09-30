@@ -21,6 +21,7 @@ module.exports = {
         accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
       },
     },
+    "gatsby-transformer-remark",
     {
       resolve: "gatsby-plugin-react-svg",
       options: {
