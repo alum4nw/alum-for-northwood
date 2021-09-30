@@ -1,8 +1,7 @@
 import * as React from "react";
-import { graphql } from "gatsby";
-import BlogPreview from "../components/BlogPreview.js";
+import { Link, graphql } from "gatsby";
 import PageLayout from "../components/PageLayout.js";
-import { getImage } from "gatsby-plugin-image";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
 const BlogPage = ({ data }) => {
   return (
@@ -10,14 +9,25 @@ const BlogPage = ({ data }) => {
       <div className="bg-white pt-16 pb-10">
         <h2 className="font-header text-h2 text-center">Mentor Blog</h2>
         <div className="justify-center items-center flex flex-col">
-          {data.allContentfulBlogPost.edges.map(({ node }) => (
-            <BlogPreview
-              title={node.title}
-              image={getImage(node.photo)}
-              preview={node.preview.preview}
-              author={node.author}
-              date={node.date}
-            />
+          {data.allContentfulBlogPost.edges.map(({ node, index }) => (
+            <Link
+              to={`/blog/${node.slug}/`}
+              key={index}
+              className="flex flex-row w-2/3 xl:items-center py-10 border-b last:border-b-0 group"
+            >
+              <GatsbyImage image={getImage(node.photo)} alt={node.slug} />
+              <div className="flex flex-col pl-10">
+                <h3 className="font-header text-h3 text-blue-dark group-hover:text-blue">
+                  {node.title}
+                </h3>
+                <p className="text-body font-body py-5">
+                  {node.preview.preview}
+                </p>
+                <p className="text-body font-body font-bold">
+                  Written by {node.author} • {node.date}
+                </p>
+              </div>
+            </Link>
           ))}
         </div>
       </div>
@@ -29,7 +39,7 @@ export default BlogPage;
 
 export const query = graphql`
   query MyQuery {
-    allContentfulBlogPost {
+    allContentfulBlogPost(sort: { fields: date, order: DESC }) {
       edges {
         node {
           preview {
@@ -39,8 +49,9 @@ export const query = graphql`
           date(formatString: "MMMM DD, YYYY")
           title
           photo {
-            gatsbyImageData
+            gatsbyImageData(width: 740)
           }
+          slug
         }
       }
     }
