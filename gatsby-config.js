@@ -30,5 +30,6 @@ module.exports = {
         },
       },
     },
+    "gatsby-transformer-inline-svg",
   ],
 };

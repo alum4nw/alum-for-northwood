@@ -9,7 +9,7 @@ const BlogPage = ({ data }) => {
       <div className="bg-white pt-16 pb-10">
         <h2 className="font-header text-h2 text-center">Mentor Blog</h2>
         <div className="justify-center items-center flex flex-col">
-          {data.allContentfulBlogPost.edges.map(({ node, index }) => (
+          {data.allContentfulBlogPost.edges.map(({ node }) => (
             <Link
               to={`/blog/${node.slug}/`}
               className="flex flex-row w-2/3 xl:items-center py-10 border-b last:border-b-0 group"
@@ -36,8 +36,8 @@ const BlogPage = ({ data }) => {
 
 export default BlogPage;
 
-export const query = graphql`
-  query MyQuery {
+export const blogQuery = graphql`
+  query BlogPosts {
     allContentfulBlogPost(sort: { fields: date, order: DESC }) {
       edges {
         node {
