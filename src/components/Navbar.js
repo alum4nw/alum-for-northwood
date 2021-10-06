@@ -34,7 +34,7 @@ const Navbar = () => {
               <Button
                 padding="py-2 px-5"
                 textSize="text-body"
-                description="Register"
+                description="Find a mentor"
               />
             </li>
           </ul>

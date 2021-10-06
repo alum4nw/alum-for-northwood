@@ -7,7 +7,9 @@ const Hero = () => {
   return (
     <div className="bg-blue-light">
       <div className="relative">
-        <Clouds />
+        <div className="flex flex-col items-center">
+          <Clouds className="xl:w-full" />
+        </div>
         <div className="absolute inset-0 text-center flex flex-col items-center justify-center">
           <h1 className="font-header font-bold text-h1 pb-6 pt-36">
             ALUM for Northwood
@@ -18,11 +20,13 @@ const Hero = () => {
           <Button
             padding="py-4 px-6"
             textSize="text-h4"
-            description="Register now!"
+            description="Find a mentor!"
           />
         </div>
       </div>
-      <Illustration />
+      <div className="flex flex-col items-center">
+        <Illustration className="xl:w-full" />
+      </div>
     </div>
   );
 };
