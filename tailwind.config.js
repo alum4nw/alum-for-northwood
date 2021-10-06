@@ -33,6 +33,7 @@ module.exports = {
   variants: {
     extend: {
       fill: ["hover", "focus"],
+      borderWidth: ["last"],
     },
   },
   plugins: ["gatsby-plugin-postcss"],

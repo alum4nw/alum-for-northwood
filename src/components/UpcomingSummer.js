@@ -16,11 +16,11 @@ const UpcomingSummer = () => {
         <Subtitle>3 group sessions.</Subtitle>
         <Subtitle>6 weeks.</Subtitle>
       </div>
-      <div className="flex flex-row pt-12 pb-14 items-center">
+      <div className="flex flex-row pt-12 pb-14 items-center w-2/3">
         <StaticImage
           src="../images/mentorMeetings.png"
           alt="mentor-mentee"
-          height="274"
+          className="w-1/2"
         />
         <div className="flex flex-col items-center space-y-4 max-w-md">
           <h3 className="font-header text-h3">Mentor Meetings</h3>
@@ -31,7 +31,7 @@ const UpcomingSummer = () => {
           </p>
         </div>
       </div>
-      <div className="flex flex-row pb-14 items-center">
+      <div className="flex flex-row pb-14 items-center w-2/3">
         <div className="flex flex-col items-center space-y-4 max-w-md">
           <h3 className="font-header text-h3">Group Sessions</h3>
           <p className="font-body text-body w-5/6 text-left">
@@ -43,8 +43,7 @@ const UpcomingSummer = () => {
         <StaticImage
           src="../images/groupSessions.png"
           alt="mentor-mentee"
-          width="433"
-          height="274"
+          className="w-1/2"
         />
       </div>
     </div>

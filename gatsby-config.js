@@ -1,3 +1,7 @@
+require("dotenv").config({
+  path: `.env`,
+});
+
 module.exports = {
   siteMetadata: {
     siteUrl: "https://www.yourdomain.tld",
@@ -11,6 +15,14 @@ module.exports = {
     "gatsby-plugin-styled-components",
     "gatsby-plugin-postcss",
     {
+      resolve: "gatsby-source-contentful",
+      options: {
+        spaceId: process.env.CONTENTFUL_SPACE_ID,
+        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+      },
+    },
+    "gatsby-transformer-remark",
+    {
       resolve: "gatsby-plugin-react-svg",
       options: {
         rule: {
@@ -18,5 +30,6 @@ module.exports = {
         },
       },
     },
+    "gatsby-transformer-inline-svg",
   ],
 };

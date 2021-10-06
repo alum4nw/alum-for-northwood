@@ -10,7 +10,10 @@ const MenteeSpotlight = () => {
       <div className="py-11 flex flex-row justify-center items-center ">
         <PencilPaperclip className="w-1/12 h-2/3" />
         <div className="px-11 w-1/4">
-          <StaticImage src="../images/menteeSpotlight.png" />
+          <StaticImage
+            src="../images/menteeSpotlight.png"
+            alt="mentee-spotlight"
+          />
         </div>
         <Gavel className="w-1/12 h-2/3" />
       </div>
