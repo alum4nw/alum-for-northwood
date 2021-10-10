@@ -21,7 +21,7 @@ const Navbar = () => {
             <NavbarItem pageLink="/about" pageTitle="About"></NavbarItem>
             <NavbarItem pageLink="/program" pageTitle="Program"></NavbarItem>
             <NavbarItem pageLink="/blog" pageTitle="Blog"></NavbarItem>
-            <li className="sm:inline-block group">
+            <li className="hidden md:inline-block group">
               <a
                 href="https://mentorcenter.us/"
                 className="text-black group-hover:text-white font-body text-base flex flex-row items-center justify-center"
@@ -30,7 +30,7 @@ const Navbar = () => {
                 <MentorArrow className="ml-1 mt-1" />
               </a>
             </li>
-            <li className="sm:inline-block pl-9">
+            <li className="hidden md:inline-block pl-9">
               <Button
                 padding="py-2 px-5"
                 textSize="text-body"
