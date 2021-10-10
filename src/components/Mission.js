@@ -2,9 +2,9 @@ import * as React from "react";
 
 const Mission = () => {
   return (
-    <div className="bg-white text-center flex flex-col items-center justify-center">
-      <h1 className="font-header text-h2 pt-16 pb-5">Our Mission</h1>
-      <p className="font-body text-left text-h4 w-1/2 pb-16">
+    <div className="bg-white text-center flex flex-col items-center justify-center py-10 md:py-16">
+      <h1 className="font-header text-mh2 md:text-h2 pb-4">Our Mission</h1>
+      <p className="font-body text-left text-body md:text-h4 px-9 md:w-1/2">
         At ALUM, we strive to <span className="font-bold">bridge the gap</span>{" "}
         between high school students and alumni through mentorship and{" "}
         <span className="font-bold">build a community</span> around shared

@@ -6,8 +6,10 @@ import { Link } from "gatsby";
 const LearnMore = () => {
   return (
     <div className="bg-white text-center flex flex-col items-center justify-center space-y-11 pb-16">
-      <h2 className="font-header text-h2 pt-16 pb-5">Learn more about...</h2>
-      <div className="flex md:flex-row sm:flex-col pb-10 space-x-9">
+      <h2 className="font-header text-mh2 md:text-h2 pt-10 md:pt-16 md:pb-5">
+        Learn more about...
+      </h2>
+      <div className="flex flex-col md:flex-row space-y-8 md:space-y-0 md:pb-10 md:space-x-9">
         <Link to="/program">
           <AboutCard
             image={

@@ -11,10 +11,10 @@ const Hero = () => {
           <Clouds className="xl:w-full" />
         </div>
         <div className="absolute inset-0 text-center flex flex-col items-center justify-center">
-          <h1 className="font-header font-bold text-h1 pb-6 pt-36">
+          <h1 className="font-header font-bold text-sh1 md:text-h1 pb-6 pt-36">
             ALUM for Northwood
           </h1>
-          <h3 className="font-body text-h4 pb-14">
+          <h3 className="font-body text-mh4 md:text-h4 pb-7 md:pb-14 px-11">
             Building a community through alumni mentorship.
           </h3>
           <Button
