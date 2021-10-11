@@ -19,13 +19,13 @@ const Hero = () => {
           </h3>
           <Button
             padding="py-4 px-6"
-            textSize="text-h4"
+            textSize="text-mh4 md:text-h4"
             description="Find a mentor!"
           />
         </div>
       </div>
       <div className="flex flex-col items-center">
-        <Illustration className="xl:w-full" />
+        <Illustration />
       </div>
     </div>
   );

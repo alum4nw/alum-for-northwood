@@ -6,11 +6,13 @@ import RightPole from "../svg/rightPole.svg";
 
 const AboutALUM = () => {
   return (
-    <div className="bg-blue-lightest pt-16">
-      <h2 className="font-header text-h2 text-center">About ALUM</h2>
+    <div className="bg-blue-lightest pt-8 md:pt-16">
+      <h2 className="font-header text-mh2 md:text-h2 pb-5 text-center">
+        About ALUM
+      </h2>
       <div className="flex flex-row items-center justify-center">
-        <LeftPole />
-        <div className="w-1/2 px-14 space-y-6 mb-14">
+        <LeftPole className="hidden md:block" />
+        <div className="md:w-1/2 px-8 md:px-14 space-y-6 mb-14 leading-relaxed">
           <p className="font-body text-body">
             Hey there! We’re ALUM. In March 2020, we were just a few college
             students that had to pack up our dorm rooms and head home to Irvine
@@ -47,7 +49,7 @@ const AboutALUM = () => {
             united by our shared experiences. Go T-wolves!
           </p>
         </div>
-        <RightPole />
+        <RightPole className="hidden md:block" />
       </div>
     </div>
   );
