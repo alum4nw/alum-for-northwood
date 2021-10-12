@@ -8,7 +8,7 @@ const Hero = () => {
     <div className="bg-blue-light">
       <div className="relative">
         <div className="flex flex-col items-center">
-          <Clouds className="xl:w-full" />
+          <Clouds className="w-full" />
         </div>
         <div className="absolute inset-0 text-center flex flex-col items-center justify-center">
           <h1 className="font-header font-bold text-sh1 md:text-h1 pb-6 pt-36">
