@@ -1,6 +1,6 @@
 import * as React from "react";
 import Button from "./Button";
-import Illustration from "../svg/heroIllustration.svg";
+import UpdatedIllustration from "../svg/updatedHero.svg";
 import Clouds from "../svg/clouds.svg";
 
 const Hero = () => {
@@ -19,13 +19,13 @@ const Hero = () => {
           </h3>
           <Button
             padding="py-4 px-6"
-            textSize="text-h4"
+            textSize="text-mh4 md:text-h4"
             description="Find a mentor!"
           />
         </div>
       </div>
       <div className="flex flex-col items-center">
-        <Illustration className="xl:w-full" />
+        <UpdatedIllustration />
       </div>
     </div>
   );
