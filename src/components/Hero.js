@@ -1,7 +1,7 @@
 import * as React from "react";
 import Button from "./Button";
-import UpdatedIllustration from "../svg/updatedHero.svg";
 import Clouds from "../svg/clouds.svg";
+import School from "../svg/updatedHero.svg";
 
 const Hero = () => {
   return (
@@ -25,7 +25,7 @@ const Hero = () => {
         </div>
       </div>
       <div className="flex flex-col items-center">
-        <UpdatedIllustration />
+        <School />
       </div>
     </div>
   );
