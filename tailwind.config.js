@@ -10,6 +10,13 @@ module.exports = {
         h4: "1.375rem",
         body: "1rem",
         small: "0.75rem",
+        th1: "2.75rem",
+        sh1: "2.5rem",
+        mh2: "1.875rem",
+        mh3: "1.5rem",
+        mh4: "1.125rem",
+        tbody: "0.875rem",
+        tsmall: "0.625rem",
       },
       colors: {
         white: "#faf7f2",

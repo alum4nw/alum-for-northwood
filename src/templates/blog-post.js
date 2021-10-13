@@ -5,22 +5,28 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
 const BlogPostTemplate = ({ data }) => {
   const post = data.contentfulBlogPost;
+  const htmlContent = post.content.childMarkdownRemark.html.replace(
+    /\n/g,
+    "<br>"
+  );
   return (
-    <PageLayout pageTitle="Blog Post">
-      <div className="bg-white">
-        <div className="w-1/2">
-          <h2 className="font-header text-h2 text-center">{post.title}</h2>
+    <PageLayout pageTitle="Blog Post" className="bg-white">
+      <div className="py-10 flex flex-col items-center justify-center mx-auto w-4/5 md:w-1/2">
+        <h2 className="font-header text-mh2 md:text-h2 text-center">
+          {post.title}
+        </h2>
+        <div className="pt-8 pb-6">
           <GatsbyImage image={getImage(post.photo)} alt={post.slug} />
-          <p className="text-body font-body font-bold">
-            Written by {post.author} • {post.date}
-          </p>
-          <div
-            className="text-body font-body"
-            dangerouslySetInnerHTML={{
-              __html: post.content.childMarkdownRemark.html,
-            }}
-          />
         </div>
+        <p className="text-body font-body font-bold hidden md:block">
+          Written by {post.author} • {post.date}
+        </p>
+        <div
+          className="text-body font-body"
+          dangerouslySetInnerHTML={{
+            __html: htmlContent,
+          }}
+        />
       </div>
     </PageLayout>
   );
