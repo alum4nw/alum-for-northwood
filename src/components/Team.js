@@ -7,7 +7,7 @@ const Team = ({ data }) => {
       <h2 className="font-header text-mh2 md:text-h2 text-center md:pb-11">
         Our Team
       </h2>
-      <div className="flex flex-col md:grid md:grid-cols-3 md:gap-y-11 md:gap-x-16 items-center justify-center md:w-1/2">
+      <div className="grid grid-cols-1 md:grid-cols-3 md:gap-y-11 md:gap-x-16 items-center justify-center md:w-1/2">
         {data.allContentfulTeamMember.edges.map(({ node, index }) => (
           <div
             className="flex flex-col text-center items-center justify-center pt-8"
