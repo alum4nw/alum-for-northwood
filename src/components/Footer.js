@@ -37,8 +37,10 @@ const Footer = () => {
         <FooterLink href="https://www.ca.gov/">
           Articles of Incorporation & Determination Letter
         </FooterLink>
-        <p className="pt-4">
-          © 2021 Alumni Leaders and Undergraduate Mentors (ALUM)
+        <p className="py-4">
+          © 2021 Alumni Leaders and
+          <br className="md:hidden" />
+          Undergraduate Mentors (ALUM)
         </p>
         <p>Not affiliated with Northwood High School</p>
       </div>
