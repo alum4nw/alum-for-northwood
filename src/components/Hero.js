@@ -1,6 +1,6 @@
 import * as React from "react";
 import Button from "./Button";
-import Illustration from "../svg/heroIllustration.svg";
+import School from "../svg/school.svg";
 import Clouds from "../svg/clouds.svg";
 
 const Hero = () => {
@@ -11,7 +11,7 @@ const Hero = () => {
           <Clouds className="w-full" />
         </div>
         <div className="absolute inset-0 text-center flex flex-col items-center justify-center">
-          <h1 className="font-header font-bold text-sh1 md:text-h1 pb-6 pt-36">
+          <h1 className="font-header font-bold text-sh1 px-3 md:text-h1 pb-6 pt-36">
             ALUM for Northwood
           </h1>
           <h3 className="font-body text-mh4 md:text-h4 pb-7 md:pb-14 px-11">
@@ -25,7 +25,7 @@ const Hero = () => {
         </div>
       </div>
       <div className="flex flex-col items-center">
-        <Illustration />
+        <School />
       </div>
     </div>
   );
