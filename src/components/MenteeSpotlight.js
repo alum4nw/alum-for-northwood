@@ -7,7 +7,7 @@ const MenteeSpotlight = () => {
   return (
     <div className="bg-blue-lightest flex flex-col py-10 md:py-16 justify-center items-center">
       <h2 className="text-mh2 md:text-h2 font-header">Meet Mentee Mia Lee!</h2>
-      <div className="py-11 flex flex-row justify-center items-center ">
+      <div className="md:py-11 pt-8 pb-6 flex flex-row justify-center items-center ">
         <PencilPaperclip className="w-1/12 h-2/3 hidden md:block" />
         <div className="md:px-11 md:w-1/4 w-2/3">
           <StaticImage

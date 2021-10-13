@@ -18,7 +18,7 @@ const PathwayOverview = ({ data }) => {
               />
             </div>
             <div className="w-4/5 md:w-2/3">
-              <h4 className="text-center md:text-left md:text-h4 text-mh4 font-body pb-3">
+              <h4 className="text-center md:text-left md:text-h4 text-mh4 font-medium font-body pb-3">
                 {node.name}
               </h4>
               <div
