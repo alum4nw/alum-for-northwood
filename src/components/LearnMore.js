@@ -4,11 +4,9 @@ import { StaticImage } from "gatsby-plugin-image";
 
 const LearnMore = () => {
   return (
-    <div className="bg-white text-center flex flex-col items-center justify-center space-y-11 pb-16">
-      <h2 className="font-header text-mh2 md:text-h2 pt-10 md:pt-16 md:pb-5">
-        Learn more about...
-      </h2>
-      <div className="flex flex-col items-center justify-center md:flex-row space-y-8 md:space-y-0 md:pb-10 md:space-x-9">
+    <div className="bg-white text-center flex flex-col items-center justify-center space-y-11 pt-10 pb-12 lg:pt-16">
+      <h2 className="font-header text-mh2 lg:text-h2">Learn more about...</h2>
+      <div className="flex flex-col items-center justify-center md:flex-row space-y-8 md:space-y-0 md:space-x-5 lg:space-x-9">
         <AboutCard
           image={
             <StaticImage

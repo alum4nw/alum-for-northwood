@@ -8,18 +8,20 @@ const EventCard = () => {
     return (
       <div className="flex flex-row items-center">
         {icon}
-        <p className="font-body text-body pl-2">{children}</p>
+        <p className="font-body text-body md:text-tbody lg:text-body pl-2">
+          {children}
+        </p>
       </div>
     );
   };
 
   return (
-    <div className="container pt-8 px-11 md:p-9 w-96 group">
+    <div className="container w-72 md:w-60 lg:w-80 group">
       <div
         className="bg-white flex flex-col text-left border border-black rounded-xl p-6 
       hover:shadow-custom transform hover:-translate-x-1 hover:-translate-y-1"
       >
-        <h4 className="text-blue-dark font-body text-h4 group-hover:text-blue">
+        <h4 className="text-blue-dark font-body text-mh4 lg:text-h4 group-hover:text-blue">
           Event Name
         </h4>
         <div className="flex flex-col py-4 space-y-1">
@@ -29,7 +31,7 @@ const EventCard = () => {
         <div className="flex flex-row items-center">
           <ArrowIcon />
           <a
-            className="font-body font-bold pl-2 text-blue-dark group-hover:text-blue"
+            className="font-body text-body md:text-tbody lg:text-body font-bold pl-2 text-blue-dark group-hover:text-blue"
             href="https://www.merriam-webster.com/dictionary/register"
           >
             Register for this event!
