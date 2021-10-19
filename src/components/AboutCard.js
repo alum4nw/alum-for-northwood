@@ -12,7 +12,7 @@ const AboutCard = ({ image, titleText, bodyText, linkTo, isInternal }) => {
         <h4 className="text-blue-dark font-body text-mh4 lg:text-h4 group-hover:text-blue pt-3 md:pt-5 pb-2">
           {titleText}
         </h4>
-        <p className="font-body text-body md:text-tbody lg:text-body md:h-24">
+        <p className="font-body text-body md:text-tbody lg:text-body pb-3 md:h-24 md:pb-0">
           {bodyText}
         </p>
       </div>
