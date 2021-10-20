@@ -10,8 +10,8 @@ const AboutALUM = () => {
       <h2 className="font-header md:font-bold text-mh2 md:text-th1 lg:text-h2 pb-5 md:pb-8 text-center">
         About ALUM
       </h2>
-      <div className="flex flex-row items-center justify-center">
-        <LeftPole className="hidden lg:block" />
+      <div className="flex flex-row items-center justify-center relative">
+        <LeftPole className="hidden lg:block absolute bottom-0 left-7 xl:left-24" />
         <div className="lg:w-1/2 px-8 md:px-20 space-y-6 md:space-y-5 mb-11 leading-relaxed">
           <p className="font-body text-body">
             Hey there! We’re ALUM. In March 2020, we were just a few college
@@ -49,7 +49,7 @@ const AboutALUM = () => {
             united by our shared experiences. Go T-wolves!
           </p>
         </div>
-        <RightPole className="hidden lg:block" />
+        <RightPole className="hidden lg:block absolute bottom-0 right-7 xl:right-24" />
       </div>
     </div>
   );
