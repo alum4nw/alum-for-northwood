@@ -31,6 +31,10 @@ module.exports = {
       boxShadow: {
         custom: "4px 4px 4px rgba(0, 0, 0, 0.25)",
       },
+      maxHeight: {
+        blog: "26.25rem",
+        blogmax: "28rem",
+      },
     },
     fontFamily: {
       body: ["Noto Sans TC"],
