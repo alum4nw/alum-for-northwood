@@ -6,7 +6,7 @@ const AboutCard = ({ image, titleText, bodyText, linkTo, isInternal }) => {
     return (
       <div
         className="bg-white flex flex-col text-left border border-black rounded-xl pt-6 px-6 
-      hover:shadow-custom transform hover:-translate-x-1 hover:-translate-y-1 md:h-72 md:w-60 lg:h-96 lg:w-80"
+      hover:shadow-custom transform hover:-translate-x-1 hover:-translate-y-1"
       >
         {image}
         <h4 className="text-blue-dark font-body text-mh4 lg:text-h4 group-hover:text-blue pt-3 md:pt-5 pb-2">
@@ -21,7 +21,7 @@ const AboutCard = ({ image, titleText, bodyText, linkTo, isInternal }) => {
 
   if (isInternal) {
     return (
-      <div className="container w-72 md:w-60 group">
+      <div className="container w-72 md:w-60 lg:w-80 group">
         <Link to={linkTo}>
           <CardContent />
         </Link>
@@ -29,7 +29,7 @@ const AboutCard = ({ image, titleText, bodyText, linkTo, isInternal }) => {
     );
   } else {
     return (
-      <div className="container w-72 md:w-60 group">
+      <div className="container w-72 md:w-60 lg:w-80 group">
         <a href={linkTo} target="_blank" rel="noreferrer noopener">
           <CardContent />
         </a>
