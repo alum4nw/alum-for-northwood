@@ -33,7 +33,6 @@ module.exports = {
       },
       maxHeight: {
         blog: "26.25rem",
-        blogmax: "28rem",
       },
     },
     fontFamily: {
