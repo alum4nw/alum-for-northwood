@@ -6,7 +6,7 @@ const LearnMore = () => {
   return (
     <div className="bg-white text-center flex flex-col items-center justify-center space-y-11 pt-10 pb-12 lg:pt-16">
       <h2 className="font-header text-mh2 lg:text-h2">Learn more about...</h2>
-      <div className="flex flex-col md:flex-row space-y-8 md:space-y-0 md:space-x-5">
+      <div className="flex flex-col md:flex-row space-y-8 md:space-y-0 md:space-x-5 lg:space-x-9">
         <AboutCard
           image={
             <StaticImage
