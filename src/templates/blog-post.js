@@ -11,18 +11,24 @@ const BlogPostTemplate = ({ data }) => {
   );
   return (
     <PageLayout pageTitle="Blog Post" className="bg-white">
-      <div className="py-10 flex flex-col items-center justify-center mx-auto w-4/5 md:w-1/2">
-        <h2 className="font-header text-mh2 md:text-h2 text-center">
+      <div className="py-10 flex flex-col w-80 md:w-auto md:max-w-xl mx-auto lg:max-w-2xl">
+        <h2 className="font-header text-mh2 lg:text-h2 text-center ">
           {post.title}
         </h2>
         <div className="pt-8 pb-6">
-          <GatsbyImage image={getImage(post.photo)} alt={post.slug} />
+          <GatsbyImage
+            image={getImage(post.photo)}
+            alt={post.slug}
+            className="w-80 h-72 md:w-auto md:max-w-xl md:h-auto md:max-h-blog lg:max-w-2xl lg:max-h-full"
+          />
         </div>
-        <p className="text-body font-body font-bold hidden md:block">
-          Written by {post.author} • {post.date}
+        <p className="text-tbody font-body lg:text-body hidden md:block md:border-b md:pb-4">
+          Written by {post.author}
+          <br />
+          {post.date} • {post.content.childMarkdownRemark.timeToRead} min read
         </p>
         <div
-          className="text-body font-body"
+          className="text-body font-body md:text-tbody lg:text-body md:pt-4"
           dangerouslySetInnerHTML={{
             __html: htmlContent,
           }}
@@ -42,6 +48,7 @@ export const pageQuery = graphql`
       content {
         childMarkdownRemark {
           html
+          timeToRead
         }
       }
       date(formatString: "MMMM DD, YYYY")

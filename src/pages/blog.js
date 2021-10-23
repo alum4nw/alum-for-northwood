@@ -6,19 +6,27 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image";
 const BlogPage = ({ data }) => {
   const BlogPreview = ({ node }) => {
     return (
-      <div className="py-10 border-b last:border-b-0 group w-4/5">
+      <div className="py-10 border-b last:border-b-0 group px-10">
         <Link to={`/blog/${node.slug}/`}>
-          <div className="grid grid-cols-1 place-content-center">
-            <GatsbyImage image={getImage(node.photo)} alt={node.slug} />
-            <h3 className="font-header text-mh3 pt-5 md:text-h3 text-blue-dark group-hover:text-blue">
-              {node.title}
-            </h3>
-            <p className="text-body font-body py-5">{node.preview.preview}</p>
-            <p className="text-body font-body font-bold">
-              Written by {node.author}{" "}
-              <span className="hidden md:block">•</span>
-              <br className="md:hidden" /> {node.date}
-            </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 place-content-center place-items-center lg:gap-x-7">
+            <GatsbyImage
+              image={getImage(node.photo)}
+              alt={node.slug}
+              className="w-80 h-72 md:w-56 md:h-72 lg:w-auto lg:max-w-md lg:h-96"
+            />
+            <div className="flex flex-col justify-center w-96 md:w-auto md:max-w-md lg:max-w-xl">
+              <h3 className="font-header text-mh3 pt-5 md:pt-0 lg:text-h3 text-blue-dark group-hover:text-blue">
+                {node.title}
+              </h3>
+              <p className="text-body font-body md:text-tbody lg:text-body py-5">
+                {node.preview.preview}
+              </p>
+              <p className="text-body font-body md:text-tbody lg:text-body font-medium">
+                Written by {node.author}{" "}
+                <span className="hidden md:inline">•</span>
+                <br className="md:hidden" /> {node.date}
+              </p>
+            </div>
           </div>
         </Link>
       </div>
@@ -28,7 +36,7 @@ const BlogPage = ({ data }) => {
   return (
     <PageLayout pageTitle="Blog">
       <div className="bg-white pt-10 md:pt-16">
-        <h2 className="font-header text-mh2 md:text-h2 text-center">
+        <h2 className="font-header text-mh2 lg:text-h2 text-center">
           Mentor Blog
         </h2>
         <div className="justify-center items-center flex flex-col">

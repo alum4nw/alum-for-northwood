@@ -15,8 +15,8 @@ const Footer = () => {
   };
 
   return (
-    <div className="bg-white grid grid-cols-1 md:justify-between font-body border-t border-black border-opacity-30 pt-6 pb-9">
-      <div className="text-center md:text-right text-body md:justify-between md:py-3 space-y-1">
+    <div className="bg-white grid grid-cols-1 md:grid-cols-2 font-body border-t border-black border-opacity-30 pt-6 pb-9 md:py-4 lg:py-6 md:px-5 lg:px-16">
+      <div className="text-center md:text-right flex flex-col justify-between md:order-last text-body md:py-2 lg:py-3 space-y-1 md:space-y-2">
         <FooterLink href="mailto:contact@alumfornorthwood.org">
           contact@alumfornorthwood.org
         </FooterLink>
@@ -32,12 +32,12 @@ const Footer = () => {
           </FooterLink>
         </div>
       </div>
-      <div className="text-small text-center px-12 pt-5">
+      <div className="text-small text-center px-12 md:px-0 md:pt-0 md:text-left pt-5">
         <p>ALUM is a registered 501c3 nonprofit corporation</p>
         <FooterLink href="https://www.ca.gov/">
           Articles of Incorporation & Determination Letter
         </FooterLink>
-        <p className="py-4">
+        <p className="py-4 md:pt-2 md:pb-0 lg:pt-4">
           © 2021 Alumni Leaders and
           <br className="md:hidden" />
           Undergraduate Mentors (ALUM)
