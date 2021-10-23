@@ -14,6 +14,7 @@ const Team = ({ data }) => {
             <GatsbyImage
               image={getImage(node.profilePicture)}
               alt={node.name}
+              className="md:w-40 lg:w-auto"
             />
             <h4 className="text-mh4 lg:text-h4 font-medium font-body pt-3 md:pt-5 pb-1">
               {node.name}
