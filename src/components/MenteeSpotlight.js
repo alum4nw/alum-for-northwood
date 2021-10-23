@@ -19,7 +19,7 @@ const MenteeSpotlight = () => {
         </div>
         <Gavel className="hidden md:block md:w-1/6 md:ml-11" />
       </div>
-      <p className="font-body text-body w-4/5 max-w-xs md:w-auto md:max-w-sm lg:max-w-lg pt-5 lg:pt-10">
+      <p className="font-body text-body px-8 max-w-md md:w-auto lg:max-w-lg pt-5 lg:pt-10">
         "I initially joined ALUM because it seemed like an interesting
         organization, and I wished to garner as much support as possible while
         entering high school. I never expected for it to be such a wholesome

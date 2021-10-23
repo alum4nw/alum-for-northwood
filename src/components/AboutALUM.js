@@ -12,7 +12,7 @@ const AboutALUM = () => {
       </h2>
       <div className="flex flex-row items-center justify-center relative">
         <LeftPole className="hidden lg:block absolute bottom-0 left-7 xl:left-16" />
-        <div className="px-8 md:px-20 space-y-6 md:space-y-5 mb-11 max-w-md md:max-w-3xl lg:max-w-2xl xl:max-w-3xl">
+        <div className="px-8 md:px-20 space-y-6 md:space-y-5 mb-11 md:max-w-3xl lg:max-w-2xl xl:max-w-3xl">
           <p className="font-body text-body">
             Hey there! We’re ALUM. In March 2020, we were just a few college
             students that had to pack up our dorm rooms and head home to Irvine

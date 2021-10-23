@@ -9,9 +9,9 @@ const ProgramHeader = () => {
       <h2 className="font-header text-mh2 md:text-th1 lg:text-h1 md:font-bold text-center">
         Program
       </h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 place-items-center">
+      <div className="grid grid-cols-1 md:grid-cols-2 place-items-center lg:px-9">
         <PathwaysWolf className="w-3/4 py-8 md:order-last" />
-        <div className="flex flex-col max-w-xs md:pl-14 md:max-w-sm lg:max-w-xl">
+        <div className="flex flex-col px-8 sm:max-w-md md:pl-14 md:max-w-md lg:max-w-xl">
           <h3 className="text-center md:text-left md:text-h3 text-mh3 font-header pb-4">
             Logistics
           </h3>
