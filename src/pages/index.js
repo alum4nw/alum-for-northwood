@@ -9,7 +9,7 @@ import LearnMore from "../components/LearnMore.js";
 
 const IndexPage = () => {
   return (
-    <PageLayout pageTitle="Home">
+    <PageLayout pageTitle="Home" bgColor="bg-blue-light">
       <Hero />
       <Mission />
       <UpcomingEvents />

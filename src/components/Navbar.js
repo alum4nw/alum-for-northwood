@@ -8,25 +8,16 @@ import { Link } from "gatsby";
 import Button from "./Button";
 import { useState } from "react";
 import * as classnames from "classnames";
-import { disableBodyScroll, enableBodyScroll } from "body-scroll-lock";
 
-const Navbar = () => {
+const Navbar = ({ bgColor }) => {
   const [isHamActive, setIsHamActive] = useState("false");
   const ToggleClass = () => {
     setIsHamActive(!isHamActive);
   };
 
-  isHamActive ? disableBodyScroll(document) : enableBodyScroll(document);
-
   return (
-    <nav
-      className={classnames("md:bg-blue-light", {
-        "bg-blue-lightest": isHamActive,
-        "bg-blue-light": !isHamActive,
-        "overscroll-y-none": isHamActive,
-      })}
-    >
-      <div className="pt-2 md:px-14">
+    <nav className={classnames(bgColor, "sticky top-0 z-50")}>
+      <div className="py-2 md:px-14">
         <div className="pr-5 pl-6 flex justify-between h-16">
           <Link to="/" className="group">
             <Logo className="h-14" />
@@ -55,10 +46,14 @@ const Navbar = () => {
             <Close />
           </button>
           <ul className="text-black self-center text-base border-t border-none md:inline-block hidden">
-            <NavbarItem pageLink="/" pageTitle="Home"></NavbarItem>
-            <NavbarItem pageLink="/about" pageTitle="About"></NavbarItem>
-            <NavbarItem pageLink="/program" pageTitle="Program"></NavbarItem>
-            <NavbarItem pageLink="/blog" pageTitle="Blog"></NavbarItem>
+            <NavbarItem pageLink="/" pageTitle="Home" bgColor={bgColor} />
+            <NavbarItem pageLink="/about" pageTitle="About" bgColor={bgColor} />
+            <NavbarItem
+              pageLink="/program"
+              pageTitle="Program"
+              bgColor={bgColor}
+            />
+            <NavbarItem pageLink="/blog" pageTitle="Blog" bgColor={bgColor} />
             <li className="md:inline-block">
               <Button
                 padding="py-2 px-5"
@@ -77,10 +72,10 @@ const Navbar = () => {
           )}
         >
           <ul className="text-black text-mh4 space-y-10 border-t border-none pb-14">
-            <NavbarItem pageLink="/" pageTitle="Home"></NavbarItem>
-            <NavbarItem pageLink="/about" pageTitle="About"></NavbarItem>
-            <NavbarItem pageLink="/program" pageTitle="Program"></NavbarItem>
-            <NavbarItem pageLink="/blog" pageTitle="Blog"></NavbarItem>
+            <NavbarItem pageLink="/" pageTitle="Home" />
+            <NavbarItem pageLink="/about" pageTitle="About" />
+            <NavbarItem pageLink="/program" pageTitle="Program" />
+            <NavbarItem pageLink="/blog" pageTitle="Blog" />
             <li>
               <Button
                 padding="py-3 px-5"

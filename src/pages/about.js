@@ -6,7 +6,7 @@ import { graphql } from "gatsby";
 
 const AboutPage = ({ data }) => {
   return (
-    <PageLayout pageTitle="About">
+    <PageLayout pageTitle="About" bgColor="bg-blue-lightest">
       <AboutALUM />
       <Team data={data} />
     </PageLayout>
