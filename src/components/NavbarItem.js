@@ -3,7 +3,7 @@ import { Link } from "gatsby";
 
 const NavbarItem = ({ pageLink, pageTitle }) => {
   return (
-    <li className="hidden md:inline-block pr-9">
+    <li className="md:inline-block md:pr-9 text-center md:text-left">
       <Link
         to={pageLink}
         className="text-black hover:text-white font-body"
