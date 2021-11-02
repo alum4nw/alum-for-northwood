@@ -4,10 +4,10 @@ import Footer from "./Footer.js";
 
 const PageLayout = ({ pageTitle, bgColor, children }) => {
   return (
-    <div className="overflow-hidden flex flex-col h-screen">
-      <Navbar bgColor={bgColor} />
+    <div className="overflow-hidden flex flex-col">
       <title>{pageTitle}</title>
-      <main className="relative flex-1 overflow-y-auto">
+      <Navbar bgColor={bgColor} className="sticky top-0 z-50" />
+      <main className="relative flex-1 overflow-y-auto overflow-x-hidden">
         {children}
         <Footer />
       </main>

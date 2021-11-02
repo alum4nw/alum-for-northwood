@@ -9,14 +9,38 @@ import Button from "./Button";
 import { useState } from "react";
 import * as classnames from "classnames";
 
+const isBrowser = typeof window !== "undefined";
+
 const Navbar = ({ bgColor }) => {
-  const [isHamActive, setIsHamActive] = useState("false");
-  const ToggleClass = () => {
-    setIsHamActive(!isHamActive);
+  const [isHamActive, setIsHamActive] = useState(false);
+  const toggleClass = () => {
+    setIsHamActive((prev) => !prev);
   };
 
+  const [isScrolling, setIsScrolling] = useState(false);
+  const changeNavColor = () => {
+    if (window.scrollY >= 10) {
+      setIsScrolling(true);
+    } else {
+      setIsScrolling(false);
+    }
+  };
+
+  const bgWithScroll = isScrolling ? "bg-white" : bgColor;
+
+  if (isBrowser) {
+    console.log("browser");
+    window.addEventListener("scroll", changeNavColor, false);
+  }
+
   return (
-    <nav className={classnames(bgColor, "sticky top-0 z-50")}>
+    <nav
+      className={classnames({
+        "bg-white": isScrolling || bgColor === "bg-white",
+        "bg-blue-light": !isScrolling && bgColor === "bg-blue-light",
+        "bg-blue-lightest": !isScrolling && bgColor === "bg-blue-lightest",
+      })}
+    >
       <div className="py-2 md:px-14">
         <div className="pr-5 pl-6 flex justify-between h-16">
           <Link to="/" className="group">
@@ -29,7 +53,7 @@ const Navbar = ({ bgColor }) => {
                 hidden: isHamActive,
               }
             )}
-            onClick={ToggleClass}
+            onClick={toggleClass}
           >
             <Hamburger />
             <h4 className="font-body text-mh4 mb-1">Menu</h4>
@@ -41,19 +65,27 @@ const Navbar = ({ bgColor }) => {
                 hidden: !isHamActive,
               }
             )}
-            onClick={ToggleClass}
+            onClick={toggleClass}
           >
             <Close />
           </button>
           <ul className="text-black self-center text-base border-t border-none md:inline-block hidden">
-            <NavbarItem pageLink="/" pageTitle="Home" bgColor={bgColor} />
-            <NavbarItem pageLink="/about" pageTitle="About" bgColor={bgColor} />
+            <NavbarItem pageLink="/" pageTitle="Home" bgColor={bgWithScroll} />
+            <NavbarItem
+              pageLink="/about"
+              pageTitle="About"
+              bgColor={bgWithScroll}
+            />
             <NavbarItem
               pageLink="/program"
               pageTitle="Program"
-              bgColor={bgColor}
+              bgColor={bgWithScroll}
             />
-            <NavbarItem pageLink="/blog" pageTitle="Blog" bgColor={bgColor} />
+            <NavbarItem
+              pageLink="/blog"
+              pageTitle="Blog"
+              bgColor={bgWithScroll}
+            />
             <li className="md:inline-block">
               <Button
                 padding="py-2 px-5"
@@ -65,17 +97,31 @@ const Navbar = ({ bgColor }) => {
         </div>
         <div
           className={classnames(
-            "flex flex-col items-center md:hidden h-screen pt-8 bg-blue-lightest",
+            bgWithScroll,
+            "flex flex-col items-center md:hidden h-screen pt-8",
             {
               hidden: !isHamActive,
+              block: isHamActive,
             }
           )}
         >
           <ul className="text-black text-mh4 space-y-10 border-t border-none pb-14">
-            <NavbarItem pageLink="/" pageTitle="Home" />
-            <NavbarItem pageLink="/about" pageTitle="About" />
-            <NavbarItem pageLink="/program" pageTitle="Program" />
-            <NavbarItem pageLink="/blog" pageTitle="Blog" />
+            <NavbarItem pageLink="/" pageTitle="Home" bgColor={bgWithScroll} />
+            <NavbarItem
+              pageLink="/about"
+              pageTitle="About"
+              bgColor={bgWithScroll}
+            />
+            <NavbarItem
+              pageLink="/program"
+              pageTitle="Program"
+              bgColor={bgWithScroll}
+            />
+            <NavbarItem
+              pageLink="/blog"
+              pageTitle="Blog"
+              bgColor={bgWithScroll}
+            />
             <li>
               <Button
                 padding="py-3 px-5"
