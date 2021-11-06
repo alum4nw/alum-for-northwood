@@ -1,16 +1,41 @@
 import * as React from "react";
 import Navbar from "./Navbar.js";
 import Footer from "./Footer.js";
+import { useEffect, useState } from "react";
+import * as classnames from "classnames";
 
 const PageLayout = ({ pageTitle, bgColor, children }) => {
+  const [isScrolling, setIsScrolling] = useState(false);
+  const changeNavColor = () => {
+    if (window.scrollY >= 1) {
+      setIsScrolling(true);
+    } else {
+      setIsScrolling(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", changeNavColor, { passive: true });
+    return () => {
+      window.removeEventListener("scroll", changeNavColor);
+    };
+  }, []);
+
   return (
-    <div className="overflow-hidden flex flex-col">
+    <div className="flex flex-col">
       <title>{pageTitle}</title>
-      <Navbar bgColor={bgColor} className="sticky top-0 z-50" />
-      <main className="relative flex-1 overflow-y-auto overflow-x-hidden">
-        {children}
-        <Footer />
-      </main>
+      <div
+        className={classnames(
+          "fixed z-50 w-full border-black border-opacity-30",
+          {
+            "border-b": isScrolling,
+          }
+        )}
+      >
+        <Navbar bgColor={isScrolling ? "bg-white" : bgColor} />
+      </div>
+      <main className="overflow-x-hidden pt-16">{children}</main>
+      <Footer />
     </div>
   );
 };
