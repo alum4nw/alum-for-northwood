@@ -7,7 +7,7 @@ import RightPole from "../svg/rightPole.svg";
 const AboutALUM = () => {
   return (
     <div className="bg-blue-lightest pt-8 md:pt-10 lg:pt-16">
-      <h2 className="font-header md:font-bold text-mh2 md:text-th1 lg:text-h2 pb-5 md:pb-8 text-center">
+      <h2 className="font-header md:font-bold text-mh2 md:text-th1 lg:font-semibold lg:text-h2 pb-5 md:pb-8 text-center">
         About ALUM
       </h2>
       <div className="flex flex-row items-center justify-center relative">

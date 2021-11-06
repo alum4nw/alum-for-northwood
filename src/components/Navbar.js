@@ -1,42 +1,92 @@
 import * as React from "react";
 import NavbarItem from "./NavbarItem";
 import Logo from "../svg/navbarLogo.svg";
-// import MentorArrow from "../svg/mentorArrow.svg";
+import Hamburger from "../svg/hamburger.svg";
+import WolfWink from "../svg/wolfWink.svg";
+import Close from "../svg/close.svg";
 import { Link } from "gatsby";
 import Button from "./Button";
+import { useState } from "react";
+import * as classnames from "classnames";
 
-const Navbar = () => {
+const Navbar = ({ bgColor }) => {
+  const [isHamActive, setIsHamActive] = useState(false);
+  const toggleClass = () => {
+    setIsHamActive((prev) => !prev);
+  };
+
   return (
-    <nav className="bg-blue-light">
-      <div className="px-14">
-        <div className="flex justify-between h-16">
-          <Link to="/" className="group">
-            <Logo className="pt-2 h-14" />
-          </Link>
-          <ul className="text-black sm:self-center text-base border-t sm:border-none">
-            <NavbarItem pageLink="/" pageTitle="Home"></NavbarItem>
-            <NavbarItem pageLink="/about" pageTitle="About"></NavbarItem>
-            <NavbarItem pageLink="/program" pageTitle="Program"></NavbarItem>
-            <NavbarItem pageLink="/blog" pageTitle="Blog"></NavbarItem>
-            {/* mentors arrow link --- tbd
-            <li className="hidden md:inline-block group">
-              <a
-                href="https://mentorcenter.us/program/alum-for-northwood"
-                className="text-black group-hover:text-white font-body text-base flex flex-row items-center justify-center"
-              >
-                Mentors
-                <MentorArrow className="ml-1 mt-1" />
-              </a>
-            </li>*/}
-            <li className="hidden md:inline-block">
-              <Button
-                padding="py-2 px-5"
-                textSize="text-body"
-                description="Find a mentor"
-              />
-            </li>
-          </ul>
-        </div>
+    <nav className={classnames(bgColor, "py-2 pr-5 pl-6 md:px-10 lg:px-16")}>
+      <div className="flex justify-between">
+        <Link to="/" className="group">
+          <Logo className="h-14" />
+        </Link>
+        <button
+          className={classnames(
+            "flex flex-row items-center space-x-2 md:hidden",
+            {
+              hidden: isHamActive,
+            }
+          )}
+          onClick={toggleClass}
+        >
+          <Hamburger />
+          <h4 className="font-body text-mh4 mb-1">Menu</h4>
+        </button>
+        <button
+          className={classnames("flex flex-row items-center md:hidden", {
+            hidden: !isHamActive,
+          })}
+          onClick={toggleClass}
+        >
+          <Close />
+        </button>
+        <ul className="text-black self-center text-base border-t border-none md:inline-block hidden">
+          <NavbarItem pageLink="/" pageTitle="Home" bgColor={bgColor} />
+          <NavbarItem pageLink="/about" pageTitle="About" bgColor={bgColor} />
+          <NavbarItem
+            pageLink="/program"
+            pageTitle="Program"
+            bgColor={bgColor}
+          />
+          <NavbarItem pageLink="/blog" pageTitle="Blog" bgColor={bgColor} />
+          <li className="md:inline-block">
+            <Button
+              padding="py-2 px-5"
+              textSize="text-body"
+              description="Find a mentor"
+            />
+          </li>
+        </ul>
+      </div>
+      <div
+        className={classnames(
+          bgColor,
+          "flex flex-col items-center md:hidden pt-8 h-screen",
+          {
+            hidden: !isHamActive,
+            block: isHamActive,
+          }
+        )}
+      >
+        <ul className="text-black text-mh4 space-y-10 border-t border-none pb-14">
+          <NavbarItem pageLink="/" pageTitle="Home" bgColor={bgColor} />
+          <NavbarItem pageLink="/about" pageTitle="About" bgColor={bgColor} />
+          <NavbarItem
+            pageLink="/program"
+            pageTitle="Program"
+            bgColor={bgColor}
+          />
+          <NavbarItem pageLink="/blog" pageTitle="Blog" bgColor={bgColor} />
+          <li>
+            <Button
+              padding="py-3 px-5"
+              textSize="text-mh4"
+              description="Find a mentor!"
+            />
+          </li>
+        </ul>
+        <WolfWink className="h-32 w-36" />
       </div>
     </nav>
   );

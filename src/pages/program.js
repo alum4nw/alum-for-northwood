@@ -7,7 +7,7 @@ import { graphql } from "gatsby";
 
 const ProgramPage = ({ data }) => {
   return (
-    <PageLayout pageTitle="Program">
+    <PageLayout pageTitle="Program" bgColor="bg-blue-lightest">
       <ProgramHeader />
       <PathwayOverview data={data} />
       <MenteeSpotlight />

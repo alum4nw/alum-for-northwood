@@ -6,7 +6,7 @@ import PathwaysWolf from "../svg/pathwaysWolf.svg";
 const ProgramHeader = () => {
   return (
     <div className="bg-blue-lightest py-8 md:pt-10 md:pb-11 lg:py-16">
-      <h2 className="font-header text-mh2 md:text-th1 lg:text-h1 md:font-bold text-center">
+      <h2 className="font-header text-mh2 md:text-th1 lg:text-h2 md:font-bold lg:font-semibold text-center">
         Program
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-2 place-items-center lg:px-9">

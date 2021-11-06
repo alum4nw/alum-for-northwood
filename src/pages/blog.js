@@ -34,7 +34,7 @@ const BlogPage = ({ data }) => {
   };
 
   return (
-    <PageLayout pageTitle="Blog">
+    <PageLayout pageTitle="Blog" bgColor="bg-white">
       <div className="bg-white pt-10 md:pt-16">
         <h2 className="font-header text-mh2 lg:text-h2 text-center">
           Mentor Blog
