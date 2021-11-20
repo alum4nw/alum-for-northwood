@@ -37,6 +37,9 @@ module.exports = {
       maxHeight: {
         blog: "26.25rem",
       },
+      borderRadius: {
+        "4xl": "30px",
+      },
     },
     fontFamily: {
       body: ["Noto Sans TC"],

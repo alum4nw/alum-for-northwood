@@ -5,7 +5,7 @@ import Clouds from "../svg/clouds.svg";
 
 const Hero = () => {
   return (
-    <div className="bg-blue-light">
+    <div className="bg-blue-light pt-8">
       <div className="relative">
         <div className="flex flex-col items-center">
           <Clouds className="lg:w-full" />
