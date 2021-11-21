@@ -1,5 +1,5 @@
 import * as React from "react";
-import CloseModal from "../svg/closeModal.svg";
+import Close from "../svg/close.svg";
 import Button from "./Button";
 import ReactModal from "react-modal";
 import { useState } from "react";
@@ -24,11 +24,12 @@ const MailingModal = ({ show, toggleFunc }) => {
       isOpen={show}
       onRequestClose={toggleFunc}
       contentLabel="mail modal"
-      className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-40 outline-none focus:outline-none"
+      className="opacity-100 z-50"
+      overlayClassName="justify-center bg-black bg-opacity-20 items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-40"
     >
-      <div className="bg-white rounded-4xl w-80 h-96 relative md:w-auto md:max-w-2xl md:h-60 lg:h-80 lg:max-w-3xl">
+      <div className="bg-white opacity-100 rounded-4xl w-80 h-96 relative md:w-auto md:max-w-2xl md:h-60 lg:h-80 lg:max-w-3xl">
         <button onClick={toggleFunc}>
-          <CloseModal className="absolute right-6 top-6" />
+          <Close className="absolute right-6 top-6" />
         </button>
         <div className="flex flex-col items-center space-y-5 pt-5 lg:pt-10">
           <h3 className="text-mh3 text-black font-header lg:text-h3 px-16 text-center">
