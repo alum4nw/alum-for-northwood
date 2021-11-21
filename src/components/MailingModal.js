@@ -26,15 +26,15 @@ const MailingModal = ({ show, toggleFunc }) => {
       contentLabel="mail modal"
       className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-40 outline-none focus:outline-none"
     >
-      <div className="bg-blue rounded-4xl w-80 h-96 relative md:w-auto md:max-w-2xl md:h-60 lg:h-80 lg:max-w-3xl">
+      <div className="bg-white rounded-4xl w-80 h-96 relative md:w-auto md:max-w-2xl md:h-60 lg:h-80 lg:max-w-3xl">
         <button onClick={toggleFunc}>
           <CloseModal className="absolute right-6 top-6" />
         </button>
         <div className="flex flex-col items-center space-y-5 pt-5 lg:pt-10">
-          <h3 className="text-mh3 text-white font-header lg:text-h3 px-16 text-center">
+          <h3 className="text-mh3 text-black font-header lg:text-h3 px-16 text-center">
             Sign up for our mailing list!
           </h3>
-          <p className="text-body font-body text-white px-10 md:text-tbody lg:text-body md:pb-3 lg:pb-7">
+          <p className="text-body font-body text-black px-10 md:text-tbody lg:text-body md:pb-3 lg:pb-7">
             Receive updates on ALUM events and get notified when program
             registration opens.
           </p>
@@ -42,10 +42,11 @@ const MailingModal = ({ show, toggleFunc }) => {
             <div className="flex flex-col items-center space-y-5 md:flex-row md:space-y-0">
               <label>
                 <input
-                  type="text"
+                  type="email"
+                  required
                   placeholder="timthewolf@alumfornorthwood.org"
                   onChange={handleChange}
-                  className="w-64 h-12 text-grey text-body md:text-tbody lg:text-body
+                  className="w-64 h-12 text-grey bg-blue-lightest text-body md:text-tbody lg:text-body focus:placeholder-transparent
                    font-body p-3 overflow-ellipsis rounded-xl md:rounded-r-none z-60 md:w-96 lg:max-w-xl md:pl-6 md:h-11 lg:h-12"
                 />
               </label>

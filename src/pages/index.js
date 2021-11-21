@@ -26,13 +26,13 @@ const IndexPage = () => {
         <h3 className="text-mh3 lg:text-h3 font-header px-6 md:px-0">
           Get notified when program registration opens.
         </h3>
-        <button onClick={toggleModal}>
+        <div onClick={toggleModal}>
           <Button
             padding="py-3 px-5"
             textSize="text-body md:text-tbody lg:text-body"
             description="Sign up for our mailing list!"
           />
-        </button>
+        </div>
         <MailingModal show={show} toggleFunc={toggleModal} />
         <p className="font-body text-body md:text-tbody lg:text-body w-2/3">
           Questions? Shoot us an email at contact@alumfornorthwood.org
