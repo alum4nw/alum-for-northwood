@@ -22,11 +22,11 @@ const PageLayout = ({ pageTitle, bgColor, children }) => {
   }, []);
 
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col" id="root">
       <title>{pageTitle}</title>
       <div
         className={classnames(
-          "fixed z-50 w-full border-black border-opacity-30",
+          "fixed z-30 w-full border-black border-opacity-30",
           {
             "border-b": isScrolling,
           }

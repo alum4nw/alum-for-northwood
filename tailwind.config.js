@@ -30,6 +30,7 @@ module.exports = {
           dark: "#3a5ea6",
         },
         black: "#020e0d",
+        grey: "#7C869C",
       },
       boxShadow: {
         custom: "4px 4px 4px rgba(0, 0, 0, 0.25)",
@@ -39,6 +40,9 @@ module.exports = {
       },
       borderRadius: {
         "4xl": "30px",
+      },
+      zIndex: {
+        60: 60,
       },
     },
     fontFamily: {

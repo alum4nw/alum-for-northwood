@@ -8,13 +8,11 @@ import Button from "../components/Button.js";
 import LearnMore from "../components/LearnMore.js";
 import MailingModal from "../components/MailingModal.js";
 import { useState } from "react";
-import * as classnames from "classnames";
 
 const IndexPage = () => {
   const [show, setShow] = useState(false);
 
-  const handleShow = () => {
-    console.log("handle");
+  const toggleModal = () => {
     setShow((prev) => !prev);
   };
 
@@ -28,21 +26,14 @@ const IndexPage = () => {
         <h3 className="text-mh3 lg:text-h3 font-header px-6 md:px-0">
           Get notified when program registration opens.
         </h3>
-        <div onClick={handleShow}>
+        <button onClick={toggleModal}>
           <Button
             padding="py-3 px-5"
             textSize="text-body md:text-tbody lg:text-body"
             description="Sign up for our mailing list!"
           />
-        </div>
-        <div
-          className={classnames({
-            hidden: !show,
-            display: show,
-          })}
-        >
-          <MailingModal />
-        </div>
+        </button>
+        <MailingModal show={show} toggleFunc={toggleModal} />
         <p className="font-body text-body md:text-tbody lg:text-body w-2/3">
           Questions? Shoot us an email at contact@alumfornorthwood.org
         </p>
