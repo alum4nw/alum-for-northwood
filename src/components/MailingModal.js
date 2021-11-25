@@ -27,7 +27,7 @@ const MailingModal = ({ show, toggleFunc }) => {
       className="opacity-100 z-50"
       overlayClassName="justify-center bg-black bg-opacity-20 items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-40"
     >
-      <div className="bg-white opacity-100 rounded-4xl w-80 h-96 relative md:w-auto md:max-w-2xl md:h-60 lg:h-80 lg:max-w-3xl">
+      <div className="bg-white opacity-100 rounded-4xl w-80 relative md:w-auto md:max-w-2xl lg:max-w-3xl">
         <button onClick={toggleFunc}>
           <Close className="absolute right-6 top-6" />
         </button>
@@ -40,25 +40,33 @@ const MailingModal = ({ show, toggleFunc }) => {
             registration opens.
           </p>
           <form onSubmit={handleSubmit}>
-            <div className="flex flex-col items-center space-y-5 md:flex-row md:space-y-0">
-              <label>
-                <input
-                  type="email"
-                  required
-                  placeholder="timthewolf@alumfornorthwood.org"
-                  onChange={handleChange}
-                  className="w-64 h-12 text-grey bg-blue-lightest text-body md:text-tbody lg:text-body focus:placeholder-transparent
+            <div className="flex flex-col pb-10 md:pb-6 lg:pb-11">
+              <div className="flex flex-col items-center space-y-5 md:flex-row md:space-y-0">
+                <label>
+                  <input
+                    type="email"
+                    required
+                    placeholder="timthewolf@alumfornorthwood.org"
+                    onChange={handleChange}
+                    className="w-64 h-12 text-grey bg-blue-lightest text-body md:text-tbody lg:text-body focus:placeholder-transparent focus:text-black
                    font-body p-3 overflow-ellipsis rounded-xl md:rounded-r-none z-60 md:w-96 lg:max-w-xl md:pl-6 md:h-11 lg:h-12"
-                />
-              </label>
-              <Button
-                padding="py-3 px-5"
-                textSize="text-body md:text-tbody lg:text-body md:h-11 lg:h-12"
-                description="Submit"
-                isModal={true}
-              >
-                <input type="submit" />
-              </Button>
+                  />
+                </label>
+                <p className="font-body text-body invisible md:hidden">
+                  Please enter a valid email address.
+                </p>
+                <Button
+                  padding="py-3 px-5"
+                  textSize="text-body md:text-tbody lg:text-body md:h-11 lg:h-12"
+                  description="Submit"
+                  isModal={true}
+                >
+                  <input type="submit" />
+                </Button>
+              </div>
+              <p className="hidden md:block font-body text-tbody lg:text-body text-center pt-2 lg:pt-3">
+                Please enter a valid email address.
+              </p>
             </div>
           </form>
         </div>
