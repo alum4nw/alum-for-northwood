@@ -3,11 +3,13 @@ import Close from "../svg/close.svg";
 import Button from "./Button";
 import ReactModal from "react-modal";
 import { useState } from "react";
+import * as classnames from "classnames";
 
 ReactModal.setAppElement("#root");
 
 const MailingModal = ({ show, toggleFunc }) => {
   const [email, setEmail] = useState("");
+  const [success, setSuccess] = useState(false);
 
   const handleChange = (event) => {
     setEmail(event.target.value);
@@ -16,7 +18,11 @@ const MailingModal = ({ show, toggleFunc }) => {
   const handleSubmit = (event) => {
     console.log(email);
     event.preventDefault();
-    toggleFunc();
+    setSuccess((prev) => !prev);
+    setTimeout(() => {
+      toggleFunc();
+      setSuccess((prev) => !prev);
+    }, 2000);
   };
 
   return (
@@ -45,15 +51,30 @@ const MailingModal = ({ show, toggleFunc }) => {
                 <label>
                   <input
                     type="email"
-                    required
+                    required="required"
                     placeholder="timthewolf@alumfornorthwood.org"
                     onChange={handleChange}
-                    className="w-64 h-12 text-grey bg-blue-lightest text-body md:text-tbody lg:text-body focus:placeholder-transparent focus:text-black
-                   font-body p-3 overflow-ellipsis rounded-xl md:rounded-r-none z-60 md:w-96 lg:max-w-xl md:pl-6 md:h-11 lg:h-12"
+                    className={classnames(
+                      "w-64 h-12 text-grey text-body md:text-tbody lg:text-body",
+                      "focus:placeholder-transparent focus:text-black font-body p-3 overflow-ellipsis rounded-xl md:rounded-r-none",
+                      "z-60 md:w-96 lg:max-w-xl md:pl-6 md:h-11 lg:h-12",
+                      {
+                        "bg-blue-lightest": !success,
+                        "bg-green-lightest": success,
+                      }
+                    )}
                   />
                 </label>
-                <p className="font-body text-body invisible md:hidden">
-                  Please enter a valid email address.
+                <p
+                  className={classnames(
+                    "font-body md:hidden text-body text-center w-48 text-green",
+                    {
+                      block: success,
+                      hidden: !success,
+                    }
+                  )}
+                >
+                  Thank you! You've been added to our mailing list.
                 </p>
                 <Button
                   padding="py-3 px-5"
@@ -64,8 +85,16 @@ const MailingModal = ({ show, toggleFunc }) => {
                   <input type="submit" />
                 </Button>
               </div>
-              <p className="hidden md:block font-body text-tbody lg:text-body text-center pt-2 lg:pt-3">
-                Please enter a valid email address.
+              <p
+                className={classnames(
+                  "hidden md:block font-body text-tbody lg:text-body text-center text-green pt-2 lg:pt-3",
+                  {
+                    visible: success,
+                    invisible: !success,
+                  }
+                )}
+              >
+                Thank you! You've been added to our mailing list.
               </p>
             </div>
           </form>
