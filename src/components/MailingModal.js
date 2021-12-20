@@ -4,6 +4,7 @@ import Button from "./Button";
 import ReactModal from "react-modal";
 import { useState } from "react";
 import * as classnames from "classnames";
+import * as axios from "axios";
 
 ReactModal.setAppElement("#root");
 
@@ -16,12 +17,12 @@ const MailingModal = ({ show, toggleFunc }) => {
   };
 
   const handleSubmit = (event) => {
-    console.log(email);
     event.preventDefault();
     setSuccess((prev) => !prev);
     setTimeout(() => {
       toggleFunc();
       setSuccess((prev) => !prev);
+      axios.post(process.env.GATSBY_CONNECTION_URL, { email: email });
     }, 2000);
   };
 
@@ -52,6 +53,7 @@ const MailingModal = ({ show, toggleFunc }) => {
                   <input
                     type="email"
                     required="required"
+                    name="email"
                     placeholder="timthewolf@alumfornorthwood.org"
                     onChange={handleChange}
                     className={classnames(

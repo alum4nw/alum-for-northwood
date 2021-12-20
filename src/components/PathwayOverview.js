@@ -1,7 +1,15 @@
 import * as React from "react";
 import Button from "./Button.js";
+import MailingModal from "../components/MailingModal.js";
+import { useState } from "react";
 
 const PathwayOverview = ({ data }) => {
+  const [show, setShow] = useState(false);
+
+  const toggleModal = () => {
+    setShow((prev) => !prev);
+  };
+
   return (
     <div className="flex flex-col bg-white justify-center items-center pb-11 lg:py-20 pt-10">
       <div className="space-y-14 lg:space-y-20 pb-11 md:mr-36 lg:mr-48">
@@ -27,13 +35,16 @@ const PathwayOverview = ({ data }) => {
           </div>
         ))}
       </div>
-      <Button
-        padding="py-3 px-5"
-        textSize="text-body"
-        description="Receive more information"
-      />
+      <div onClick={toggleModal}>
+        <Button
+          padding="py-3 px-5"
+          textSize="text-body"
+          description="Receive more information"
+        />
+      </div>
+      <MailingModal show={show} toggleFunc={toggleModal} />
       <p className="text-center text-small pt-6 md:pt-11 font-body md:text-tbody lg:text-body w-2/3 md:w-auto">
-        Interested in a pathway we don’t have yet?
+        Interested in a pathway we don't have yet?
         <br className="md:hidden" /> Tell us at contact@alumfornorthwood.org :)
       </p>
     </div>
