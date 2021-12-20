@@ -1,54 +1,38 @@
-import * as React from "react"
-import { Link } from "gatsby"
-
-// styles
-const pageStyles = {
-  color: "#232129",
-  padding: "96px",
-  fontFamily: "-apple-system, Roboto, sans-serif, serif",
-}
-const headingStyles = {
-  marginTop: 0,
-  marginBottom: 64,
-  maxWidth: 320,
-}
-
-const paragraphStyles = {
-  marginBottom: 48,
-}
-const codeStyles = {
-  color: "#8A6534",
-  padding: 4,
-  backgroundColor: "#FFF4DB",
-  fontSize: "1.25rem",
-  borderRadius: 4,
-}
+import * as React from "react";
+import PageLayout from "../components/PageLayout";
+import TextBubble from "../svg/textBubble.svg";
+import CryingWolf from "../svg/cryingWolf.svg";
+import Button from "../components/Button";
+import { Link } from "gatsby";
 
 // markup
 const NotFoundPage = () => {
   return (
-    <main style={pageStyles}>
-      <title>Not found</title>
-      <h1 style={headingStyles}>Page not found</h1>
-      <p style={paragraphStyles}>
-        Sorry{" "}
-        <span role="img" aria-label="Pensive emoji">
-          😔
-        </span>{" "}
-        we couldn’t find what you were looking for.
-        <br />
-        {process.env.NODE_ENV === "development" ? (
-          <>
-            <br />
-            Try creating a page in <code style={codeStyles}>src/pages/</code>.
-            <br />
-          </>
-        ) : null}
-        <br />
-        <Link to="/">Go home</Link>.
-      </p>
-    </main>
-  )
-}
+    <PageLayout pageTitle="Page not found" bgColor="bg-blue-lightest">
+      <div className="bg-blue-lightest flex flex-col items-center pt-16 pb-40 space-y-8">
+        <h1 className="text-center font-header text-sh1 font-bold">
+          Page not found
+        </h1>
+        <div className="relative">
+          <TextBubble className="absolute" />
+          <div className="flex flex-col items-center z-10 relative p-6 space-y-4">
+            <p className="text-left w-60 font-body text-body">
+              We're sorry, we couldn't find the page you're looking for. Let's
+              get you back on track!
+            </p>
+            <Link to="/">
+              <Button
+                padding="py-3 px-5"
+                textSize="text-mh4 font-body"
+                description="ALUM Website Home"
+              />
+            </Link>
+          </div>
+        </div>
+        <CryingWolf />
+      </div>
+    </PageLayout>
+  );
+};
 
-export default NotFoundPage
+export default NotFoundPage;
