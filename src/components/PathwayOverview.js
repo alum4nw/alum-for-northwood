@@ -45,7 +45,14 @@ const PathwayOverview = ({ data }) => {
       <MailingModal show={show} toggleFunc={toggleModal} />
       <p className="text-center text-small pt-6 md:pt-11 font-body md:text-tbody lg:text-body w-2/3 md:w-auto">
         Interested in a pathway we don't have yet?
-        <br className="md:hidden" /> Tell us at contact@alumfornorthwood.org :)
+        <br className="md:hidden" /> Tell us at{" "}
+        <a
+          href="mailto:contact@alumfornorthwood.org"
+          className="hover:text-blue"
+        >
+          contact@alumfornorthwood.org
+        </a>{" "}
+        :)
       </p>
     </div>
   );

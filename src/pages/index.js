@@ -35,7 +35,13 @@ const IndexPage = () => {
         </div>
         <MailingModal show={show} toggleFunc={toggleModal} />
         <p className="font-body text-body md:text-tbody lg:text-body w-2/3">
-          Questions? Shoot us an email at contact@alumfornorthwood.org
+          Questions? Shoot us an email at{" "}
+          <a
+            href="mailto:contact@alumfornorthwood.org"
+            className="hover:text-blue"
+          >
+            contact@alumfornorthwood.org
+          </a>
         </p>
       </div>
       <LearnMore />

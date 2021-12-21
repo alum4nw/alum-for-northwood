@@ -23,6 +23,7 @@ const ProgramHeader = () => {
             mentee will have three 1-on-1 sessions with their mentor and three
             group events with everyone in their pathway.
           </p>
+          {/*
           <div className="flex flex-row justify-center items-center md:justify-start pb-9">
             <ArrowIcon />
             <Link
@@ -31,7 +32,7 @@ const ProgramHeader = () => {
             >
               Our first program
             </Link>
-          </div>
+          </div>*/}
           <h3 className="text-center md:text-left md:text-h3 text-mh3 font-header pb-4">
             Goal
           </h3>

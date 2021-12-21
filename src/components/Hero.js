@@ -17,11 +17,17 @@ const Hero = () => {
           <h3 className="font-body text-mh4 lg:text-h4 pb-7 md:pb-14 px-11">
             Building a community through alumni mentorship.
           </h3>
-          <Button
-            padding="py-4 px-6"
-            textSize="text-mh4 lg:text-h4"
-            description="Find a mentor!"
-          />
+          <a
+            href="https://mentorcenter.us/program/alum-for-northwood"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            <Button
+              padding="py-4 px-6"
+              textSize="text-mh4 lg:text-h4"
+              description="Find a mentor!"
+            />
+          </a>
         </div>
       </div>
       <div className="flex flex-col items-center">

@@ -51,11 +51,17 @@ const Navbar = ({ bgColor }) => {
           />
           <NavbarItem pageLink="/blog" pageTitle="Blog" bgColor={bgColor} />
           <li className="md:inline-block">
-            <Button
-              padding="py-2 px-5"
-              textSize="text-body"
-              description="Find a mentor"
-            />
+            <a
+              href="https://mentorcenter.us/program/alum-for-northwood"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              <Button
+                padding="py-2 px-5"
+                textSize="text-body"
+                description="Find a mentor"
+              />
+            </a>
           </li>
         </ul>
       </div>
@@ -79,11 +85,17 @@ const Navbar = ({ bgColor }) => {
           />
           <NavbarItem pageLink="/blog" pageTitle="Blog" bgColor={bgColor} />
           <li>
-            <Button
-              padding="py-3 px-5"
-              textSize="text-mh4"
-              description="Find a mentor!"
-            />
+            <a
+              href="https://mentorcenter.us/program/alum-for-northwood"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              <Button
+                padding="py-3 px-5"
+                textSize="text-mh4"
+                description="Find a mentor!"
+              />
+            </a>
           </li>
         </ul>
         <WolfWink className="h-32 w-36" />

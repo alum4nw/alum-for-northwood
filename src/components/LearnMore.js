@@ -43,7 +43,7 @@ const LearnMore = () => {
           }
           titleText="Our Mentors"
           bodyText="Meet an amazing community of alumni and schedule mentorship sessions."
-          linkTo="https://mentorcenter.us/"
+          linkTo="https://mentorcenter.us/program/alum-for-northwood"
           isInternal={false}
         />
       </div>
