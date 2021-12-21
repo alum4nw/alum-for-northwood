@@ -34,9 +34,15 @@ const Footer = () => {
       </div>
       <div className="text-small text-center px-12 md:px-0 md:pt-0 md:text-left pt-5">
         <p>ALUM is a registered 501c3 nonprofit corporation</p>
-        <FooterLink href="https://www.ca.gov/">
-          Articles of Incorporation & Determination Letter
-        </FooterLink>
+        <p>
+          <FooterLink href="https://drive.google.com/file/d/1AYszQlF4WemArFsdgNVlnGgQfSkZKNbj/view?usp=sharing">
+            Articles of Incorporation
+          </FooterLink>
+          &nbsp;&&nbsp;
+          <FooterLink href="https://drive.google.com/file/d/14B1-5vLTzOyDuzBf3Tar85jLt7n3iEcw/view?usp=sharing">
+            Determination Letter
+          </FooterLink>
+        </p>
         <p className="py-4 md:pt-2 md:pb-0 lg:pt-4">
           © 2021 Alumni Leaders and
           <br className="md:hidden" />
