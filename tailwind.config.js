@@ -30,12 +30,26 @@ module.exports = {
           dark: "#3a5ea6",
         },
         black: "#020e0d",
+        grey: "#7C869C",
+        red: {
+          lightest: "#ffd6d6",
+        },
+        green: {
+          lightest: "#c7edc7",
+          DEFAULT: "#008000",
+        },
       },
       boxShadow: {
         custom: "4px 4px 4px rgba(0, 0, 0, 0.25)",
       },
       maxHeight: {
         blog: "26.25rem",
+      },
+      borderRadius: {
+        "4xl": "30px",
+      },
+      zIndex: {
+        60: 60,
       },
     },
     fontFamily: {
