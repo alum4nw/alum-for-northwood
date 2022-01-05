@@ -1,6 +1,4 @@
 import * as React from "react";
-import { Link } from "gatsby";
-import ArrowIcon from "../svg/arrowIcon.svg";
 import PathwaysWolf from "../svg/pathwaysWolf.svg";
 
 const ProgramHeader = () => {

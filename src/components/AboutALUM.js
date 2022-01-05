@@ -1,6 +1,4 @@
 import * as React from "react";
-import { Link } from "gatsby";
-import ArrowIcon from "../svg/arrowIcon.svg";
 import LeftPole from "../svg/leftPole.svg";
 import RightPole from "../svg/rightPole.svg";
 
@@ -14,7 +12,7 @@ const AboutALUM = () => {
         <LeftPole className="hidden lg:block absolute bottom-0 left-7 xl:left-16" />
         <div className="px-8 md:px-20 space-y-6 md:space-y-5 mb-11 md:max-w-3xl lg:max-w-2xl xl:max-w-3xl">
           <p className="font-body text-body">
-            Hey there! We’re ALUM. In March 2020, we were just a few college
+            Hey there! We're ALUM. In March 2020, we were just a few college
             students that had to pack up our dorm rooms and head home to Irvine
             for the rest of the year. We started catching up with each other on
             Zoom, talking about our college experiences and reminiscing over
@@ -26,13 +24,13 @@ const AboutALUM = () => {
             had something like that in high school."
           </p>
           <p className="font-body text-body">
-            Over the next few weeks, we had conversations with people we hadn’t
+            Over the next few weeks, we had conversations with people we hadn't
             seen in years and pitched the idea of a mentorship program that
             connected Northwood High School students with alumni: from
             Northwood, for Northwood. Daily brainstorming sessions turned into
             fervent marketing discussions as the months rolled on and on April
             19, ALUM was born! We hosted our first ever summer program that year
-            and haven’t looked back since.
+            and haven't looked back since.
           </p>
           {/*
           <div className="flex flex-row items-center justify-center">
@@ -46,7 +44,7 @@ const AboutALUM = () => {
           </div>*/}
           <p className="font-body text-body">
             ALUM is now a registered 501c3 non-profit organization, but it means
-            much more than that. To us, it’s a community of amazing people
+            much more than that. To us, it's a community of amazing people
             united by our shared experiences. Go T-wolves!
           </p>
         </div>
