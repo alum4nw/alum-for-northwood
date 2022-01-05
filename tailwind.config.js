@@ -60,6 +60,7 @@ module.exports = {
   variants: {
     extend: {
       fill: ["hover", "focus"],
+      stroke: ["hover"],
       borderWidth: ["last"],
     },
   },
