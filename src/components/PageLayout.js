@@ -3,6 +3,8 @@ import Navbar from "./Navbar.js";
 import Footer from "./Footer.js";
 import { useEffect, useState } from "react";
 import * as classnames from "classnames";
+import favicon from "../images/favicon.ico";
+import Helmet from "react-helmet";
 
 const PageLayout = ({ pageTitle, bgColor, children }) => {
   const [isScrolling, setIsScrolling] = useState(false);
@@ -23,7 +25,10 @@ const PageLayout = ({ pageTitle, bgColor, children }) => {
 
   return (
     <div className="flex flex-col" id="root">
-      <title>{pageTitle}</title>
+      <Helmet>
+        <title>{pageTitle} - ALUM for Northwood</title>
+        <link rel="icon" href={favicon} />
+      </Helmet>
       <div
         className={classnames(
           "fixed z-30 w-full border-black border-opacity-30",
