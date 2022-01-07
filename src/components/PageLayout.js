@@ -26,7 +26,7 @@ const PageLayout = ({ pageTitle, bgColor, children }) => {
   return (
     <div className="flex flex-col" id="root">
       <Helmet>
-        <title>{pageTitle}</title>
+        <title>{pageTitle} - ALUM for Northwood</title>
         <link rel="icon" href={favicon} />
       </Helmet>
       <div
