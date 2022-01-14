@@ -44,14 +44,14 @@ const UpcomingSummer = () => {
         <div className="pt-10 pb-6 justify-center flex flex-col space-y-3">
           <h3 className="font-header text-mh3 lg:text-h3">Group Sessions</h3>
           <p className="font-body text-body text-left hidden md:block">
-            Learn about the career pathway you’re interested in through
+            Learn about the career pathway you're interested in through
             specialized group sessions. Gain practical skills through workshops
             and hear from a variety of mentors about their experiences.
           </p>
         </div>
         <StaticImage src="../images/groupSessions.png" alt="mentor-mentee" />
         <p className="font-body text-body text-left pt-5 md:hidden">
-          Learn about the career pathway you’re interested in through
+          Learn about the career pathway you're interested in through
           specialized group sessions. Gain practical skills through workshops
           and hear from a variety of mentors about their experiences.
         </p>
