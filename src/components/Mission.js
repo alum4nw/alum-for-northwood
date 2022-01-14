@@ -10,7 +10,7 @@ const Mission = () => {
         <span className="font-bold">build a community</span> around shared
         experiences. We believe{" "}
         <span className="font-bold">every student should have a mentor</span>{" "}
-        who knows what life is like at Northwood because they’ve lived it.
+        who knows what life is like at Northwood because they've lived it.
       </p>
     </div>
   );
