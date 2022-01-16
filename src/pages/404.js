@@ -10,7 +10,7 @@ import { Link } from "gatsby";
 const NotFoundPage = () => {
   return (
     <PageLayout pageTitle="Page not found" bgColor="bg-blue-lightest">
-      <div className="bg-blue-lightest flex h-screen w-screen -mt-6 lg:-mt-10">
+      <div className="bg-blue-lightest flex h-screen w-screen -mt-10">
         <div className="flex flex-col items-center space-y-8 m-auto">
           <h1 className="text-center font-header text-sh1 md:text-th1 lg:text-h1 font-bold">
             Page not found
