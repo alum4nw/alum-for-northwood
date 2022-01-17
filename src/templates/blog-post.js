@@ -5,10 +5,12 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
 const BlogPostTemplate = ({ data }) => {
   const post = data.contentfulBlogPost;
-  const htmlContent = post.content.childMarkdownRemark.html.replace(
-    /\n/g,
-    "<br>"
-  );
+  const htmlContent = post.content.childMarkdownRemark.html
+    .replace(/\n<ul>\n/g, "<ul>")
+    .replace(/\n<\/ul>/g, "</ul>")
+    .replace(/<\/li>\n<li>/g, "</li><li>")
+    .replace(/\n/g, "<br>");
+
   return (
     <PageLayout pageTitle="Blog Post" bgColor="bg-white">
       <div className="bg-white">
