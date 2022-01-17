@@ -41,7 +41,7 @@ const Navbar = ({ bgColor }) => {
         >
           <Close />
         </button>
-        <ul className="text-black self-center text-base border-t border-none md:inline-block hidden">
+        <ul className="text-black self-center text-base border-t border-none md:inline-block hidden list-none">
           <NavbarItem pageLink="/" pageTitle="Home" bgColor={bgColor} />
           <NavbarItem pageLink="/about" pageTitle="About" bgColor={bgColor} />
           <NavbarItem
@@ -75,7 +75,7 @@ const Navbar = ({ bgColor }) => {
           }
         )}
       >
-        <ul className="text-black text-mh4 space-y-10 border-t border-none pb-14">
+        <ul className="text-black text-mh4 space-y-10 border-t border-none pb-14 list-none">
           <NavbarItem pageLink="/" pageTitle="Home" bgColor={bgColor} />
           <NavbarItem pageLink="/about" pageTitle="About" bgColor={bgColor} />
           <NavbarItem
