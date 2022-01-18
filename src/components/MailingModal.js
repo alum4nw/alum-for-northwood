@@ -2,11 +2,9 @@ import * as React from "react";
 import Close from "../svg/close.svg";
 import Button from "./Button";
 import ReactModal from "react-modal";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import * as classnames from "classnames";
 import * as axios from "axios";
-
-ReactModal.setAppElement("#root");
 
 const MailingModal = ({ show, toggleFunc }) => {
   const [email, setEmail] = useState("");
@@ -25,6 +23,10 @@ const MailingModal = ({ show, toggleFunc }) => {
       axios.post(process.env.GATSBY_CONNECTION_URL, { email: email });
     }, 2000);
   };
+
+  useEffect(() => {
+    ReactModal.setAppElement("#root");
+  }, []);
 
   return (
     <ReactModal
