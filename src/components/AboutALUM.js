@@ -24,13 +24,13 @@ const AboutALUM = () => {
             had something like that in high school."
           </p>
           <p className="font-body text-body">
-            Over the next few weeks, we had conversations with people we hadn't
-            seen in years and pitched the idea of a mentorship program that
-            connected Northwood High School students with alumni: from
-            Northwood, for Northwood. Daily brainstorming sessions turned into
-            fervent marketing discussions as the months rolled on and on April
-            19, ALUM was born! We hosted our first ever summer program that year
-            and haven't looked back since.
+            Over the next few , we had conversations with people we hadn't seen
+            in years and pitched the idea of a mentorship program that connected
+            Northwood High School students with alumni: from Northwood, for
+            Northwood. Daily brainstorming sessions turned into fervent
+            marketing discussions as the months rolled on and on April 19, ALUM
+            was born! We hosted our first ever summer program that year and
+            haven't looked back since.
           </p>
           {/*
           <div className="flex flex-row items-center justify-center">
