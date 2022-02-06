@@ -51,7 +51,7 @@ const Navbar = ({ bgColor }) => {
             bgColor={bgColor}
           />
           <NavbarItem pageLink="/blog" pageTitle="Blog" bgColor={bgColor} />
-          <li className="md:inline-block md:pr-8">
+          <li className="md:inline-block md:pr-3">
             <DonateButton bgColor={bgColor} />
           </li>
           <li className="md:inline-block">
