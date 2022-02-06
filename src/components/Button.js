@@ -3,7 +3,7 @@ import * as classnames from "classnames";
 
 const Button = ({ padding, textSize, description, isModal = false }) => {
   const classStr = classnames(
-    "bg-blue-dark text-white font-body rounded-lg hover:bg-blue ",
+    "bg-blue-dark text-white font-body rounded-lg hover:bg-blue",
     padding,
     textSize,
     {
