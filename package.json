@@ -49,6 +49,8 @@
     "react-helmet": "^6.1.0",
     "react-mailto": "^0.4.0",
     "react-modal": "^3.14.4",
+    "react-router-dom": "^6.2.1",
+    "react-router-hash-link": "^2.4.3",
     "sanitize-html": "^2.6.1",
     "set-value": "^4.1.0",
     "sharp": "^0.29.3",
