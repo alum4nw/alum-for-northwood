@@ -18,14 +18,14 @@ const Hero = () => {
             Building a community through alumni mentorship.
           </h3>
           <a
-            href="https://mentorcenter.us/program/alum-for-northwood"
+            href="http://bit.do/alum-register"
             target="_blank"
             rel="noreferrer noopener"
           >
             <Button
               padding="py-4 px-6"
               textSize="text-mh4 lg:text-h4"
-              description="Find a mentor!"
+              description="Register for Summer 2022!"
             />
           </a>
         </div>
