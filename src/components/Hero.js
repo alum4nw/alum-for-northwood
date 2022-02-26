@@ -18,7 +18,7 @@ const Hero = () => {
             Building a community through alumni mentorship.
           </h3>
           <a
-            href="http://bit.do/alum-register"
+            href={process.env.REGISTER_CTA_URL}
             target="_blank"
             rel="noreferrer noopener"
           >

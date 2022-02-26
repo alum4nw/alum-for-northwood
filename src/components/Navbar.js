@@ -58,7 +58,7 @@ const Navbar = ({ bgColor }) => {
           </li>
           <li className="md:inline-block">
             <a
-              href="http://bit.do/alum-register"
+              href={process.env.REGISTER_CTA_URL}
               target="_blank"
               rel="noreferrer noopener"
             >
@@ -96,7 +96,7 @@ const Navbar = ({ bgColor }) => {
           </li>
           <li>
             <a
-              href="http://bit.do/alum-register"
+              href={process.env.REGISTER_CTA_URL}
               target="_blank"
               rel="noreferrer noopener"
             >
