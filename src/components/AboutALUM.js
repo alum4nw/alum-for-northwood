@@ -32,16 +32,6 @@ const AboutALUM = () => {
             19, ALUM was born! We hosted our first ever summer program that year
             and haven't looked back since.
           </p>
-          {/*
-          <div className="flex flex-row items-center justify-center">
-            <ArrowIcon />
-            <Link
-              className="font-body font-bold pl-2 text-blue-dark hover:text-blue"
-              to="/blog"
-            >
-              Our first program
-            </Link>
-          </div>*/}
           <p className="font-body text-body">
             ALUM is now a registered 501c3 non-profit organization, but it means
             much more than that. To us, it's a community of amazing people
