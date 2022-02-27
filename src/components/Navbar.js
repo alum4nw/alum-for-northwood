@@ -52,7 +52,7 @@ const Navbar = ({ bgColor }) => {
             bgColor={bgColor}
           />
           <NavbarItem pageLink="/blog" pageTitle="Blog" bgColor={bgColor} />
-          <MentorNavbar bgColor={bgColor} />
+          {/*<MentorNavbar bgColor={bgColor} />*/}
           <li className="md:inline-block md:pr-3">
             <DonateButton bgColor={bgColor} />
           </li>
@@ -90,7 +90,7 @@ const Navbar = ({ bgColor }) => {
             bgColor={bgColor}
           />
           <NavbarItem pageLink="/blog" pageTitle="Blog" bgColor={bgColor} />
-          <MentorNavbar bgColor={bgColor} />
+          {/*<MentorNavbar bgColor={bgColor} />*/}
           <li>
             <DonateButton bgColor={bgColor} />
           </li>
