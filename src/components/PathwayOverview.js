@@ -35,13 +35,18 @@ const PathwayOverview = ({ data }) => {
           </div>
         ))}
       </div>
-      <div onClick={toggleModal}>
+      <a
+        href={process.env.REGISTER_CTA_URL}
+        target="_blank"
+        rel="noreferrer noopener"
+      >
         <Button
           padding="py-3 px-5"
           textSize="text-body"
-          description="Receive more information"
+          description="Register for Summer 2022"
+          isModal={false}
         />
-      </div>
+      </a>
       <MailingModal show={show} toggleFunc={toggleModal} />
       <p className="text-center text-small pt-6 md:pt-11 font-body md:text-tbody lg:text-body w-2/3 md:w-auto">
         Interested in a pathway we don't have yet?

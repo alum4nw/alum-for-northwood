@@ -25,7 +25,7 @@ const IndexPage = () => {
       <div className="bg-blue-lightest flex flex-col items-center text-center justify-center space-y-8 pt-10 pb-11 lg:py-16">
         <p id="mail"></p>
         <h3 className="text-mh3 lg:text-h3 font-header px-6 md:px-0">
-          Get notified when program registration opens.
+          Stay updated about ALUM
         </h3>
         <div onClick={toggleModal}>
           <Button

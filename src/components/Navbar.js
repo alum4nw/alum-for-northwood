@@ -9,6 +9,7 @@ import Button from "./Button";
 import { useState } from "react";
 import * as classnames from "classnames";
 import DonateButton from "./DonateButton";
+import MentorNavbar from "./MentorNavbar";
 
 const Navbar = ({ bgColor }) => {
   const [isHamActive, setIsHamActive] = useState(false);
@@ -51,19 +52,20 @@ const Navbar = ({ bgColor }) => {
             bgColor={bgColor}
           />
           <NavbarItem pageLink="/blog" pageTitle="Blog" bgColor={bgColor} />
+          {/*<MentorNavbar bgColor={bgColor} />*/}
           <li className="md:inline-block md:pr-3">
             <DonateButton bgColor={bgColor} />
           </li>
           <li className="md:inline-block">
             <a
-              href="https://mentorcenter.us/program/alum-for-northwood"
+              href={process.env.REGISTER_CTA_URL}
               target="_blank"
               rel="noreferrer noopener"
             >
               <Button
                 padding="py-2 px-5"
                 textSize="text-body"
-                description="Find a mentor"
+                description="Register"
               />
             </a>
           </li>
@@ -88,19 +90,20 @@ const Navbar = ({ bgColor }) => {
             bgColor={bgColor}
           />
           <NavbarItem pageLink="/blog" pageTitle="Blog" bgColor={bgColor} />
+          {/*<MentorNavbar bgColor={bgColor} />*/}
           <li>
             <DonateButton bgColor={bgColor} />
           </li>
           <li>
             <a
-              href="https://mentorcenter.us/program/alum-for-northwood"
+              href={process.env.REGISTER_CTA_URL}
               target="_blank"
               rel="noreferrer noopener"
             >
               <Button
                 padding="py-3 px-5"
                 textSize="text-mh4"
-                description="Find a mentor!"
+                description="Register"
               />
             </a>
           </li>

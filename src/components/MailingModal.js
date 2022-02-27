@@ -45,8 +45,8 @@ const MailingModal = ({ show, toggleFunc }) => {
             Sign up for our mailing list!
           </h3>
           <p className="text-body font-body text-black px-10 md:text-tbody lg:text-body md:pb-3 lg:pb-7">
-            Receive updates on ALUM events and get notified when program
-            registration opens.
+            Receive updates on ALUM events and information about our summer
+            program.
           </p>
           <form onSubmit={handleSubmit}>
             <div className="flex flex-col pb-10 md:pb-6 lg:pb-11">
