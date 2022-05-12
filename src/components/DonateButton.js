@@ -5,7 +5,7 @@ const DonateButton = ({ bgColor }) => {
   const buttonBg = bgColor === "bg-white" ? "bg-blue-lightest" : "bg-white";
   return (
     <a
-      href="https://givebutter.com/donate-alum"
+      href="https://givebutter.com/alum"
       target="_blank"
       rel="noreferrer noopener"
     >
