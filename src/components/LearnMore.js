@@ -33,19 +33,6 @@ const LearnMore = () => {
           linkTo="/about"
           isInternal={true}
         />
-        <AboutCard
-          image={
-            <StaticImage
-              src="../images/ourMentors.png"
-              alt="our-program"
-              className="border border-black"
-            />
-          }
-          titleText="Our Mentors"
-          bodyText="Meet an amazing community of alumni and schedule mentorship sessions."
-          linkTo="https://mentorcenter.us/program/alum-for-northwood"
-          isInternal={false}
-        />
       </div>
     </div>
   );
