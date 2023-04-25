@@ -44,7 +44,7 @@ const Footer = () => {
           </FooterLink>
         </p>
         <p className="py-4 md:pt-2 md:pb-0 lg:pt-4">
-          © 2021 Alumni Leaders and
+          © 2023 Alumni Leaders and
           <br className="md:hidden" />
           Undergraduate Mentors (ALUM)
         </p>
