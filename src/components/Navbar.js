@@ -9,7 +9,6 @@ import Button from "./Button";
 import { useState } from "react";
 import * as classnames from "classnames";
 import DonateButton from "./DonateButton";
-import MentorNavbar from "./MentorNavbar";
 
 const Navbar = ({ bgColor }) => {
   const [isHamActive, setIsHamActive] = useState(false);
@@ -52,7 +51,6 @@ const Navbar = ({ bgColor }) => {
             bgColor={bgColor}
           />
           <NavbarItem pageLink="/blog" pageTitle="Blog" bgColor={bgColor} />
-          <MentorNavbar bgColor={bgColor} />
           <li className="md:inline-block md:pr-3">
             <DonateButton bgColor={bgColor} />
           </li>
@@ -90,7 +88,6 @@ const Navbar = ({ bgColor }) => {
             bgColor={bgColor}
           />
           <NavbarItem pageLink="/blog" pageTitle="Blog" bgColor={bgColor} />
-          <MentorNavbar bgColor={bgColor} />
           <li>
             <DonateButton bgColor={bgColor} />
           </li>
