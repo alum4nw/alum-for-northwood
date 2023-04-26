@@ -63,7 +63,7 @@ const Navbar = ({ bgColor }) => {
               <Button
                 padding="py-2 px-5"
                 textSize="text-body"
-                description="Register for Beta Testing!"
+                description="Register"
               />
             </a>
           </li>
@@ -100,7 +100,7 @@ const Navbar = ({ bgColor }) => {
               <Button
                 padding="py-3 px-5"
                 textSize="text-mh4"
-                description="Register for Beta Testing!"
+                description="Register"
               />
             </a>
           </li>

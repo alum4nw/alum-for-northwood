@@ -43,7 +43,7 @@ const PathwayOverview = ({ data }) => {
         <Button
           padding="py-3 px-5"
           textSize="text-body"
-          description="Register for Beta Testing!"
+          description="Register for Beta Testing"
           isModal={false}
         />
       </a>
