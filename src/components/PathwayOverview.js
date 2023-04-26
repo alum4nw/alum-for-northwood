@@ -36,7 +36,7 @@ const PathwayOverview = ({ data }) => {
         ))}
       </div>
       <a
-        href={process.env.REGISTER_CTA_URL}
+        href="https://docs.google.com/forms/d/e/1FAIpQLSd-wcbL7hizju4D1MO2jHZd9X9iVPdV2-WhfHgCLeEDSyuj9Q/viewform?usp=sf_link"
         target="_blank"
         rel="noreferrer noopener"
       >
