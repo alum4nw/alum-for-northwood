@@ -25,7 +25,7 @@ const Hero = () => {
             <Button
               padding="py-4 px-6"
               textSize="text-mh4 lg:text-h4"
-              description="Register for Summer 2022!"
+              description="Register for Beta Testing!"
             />
           </a>
         </div>
