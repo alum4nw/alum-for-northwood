@@ -21,14 +21,14 @@
   }
 
   @font-face {
-    font-family: "Noto Sans TC";
+    font-family: "Noto Sans";
     font-weight: 400;
-    src: url("../fonts/NotoSansTC-Regular.ttf") format("truetype");
+    src: url("../fonts/NotoSans-Regular.ttf") format("truetype");
   }
 
   @font-face {
-    font-family: "Noto Sans TC";
+    font-family: "Noto Sans";
     font-weight: 500;
-    src: url("../fonts/NotoSansTC-Medium.ttf") format("truetype");
+    src: url("../fonts/NotoSans-Medium.ttf") format("truetype");
   }
 }
