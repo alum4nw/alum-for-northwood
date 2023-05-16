@@ -53,7 +53,7 @@ module.exports = {
       },
     },
     fontFamily: {
-      body: ["Noto Sans TC"],
+      body: ["Noto Sans"],
       header: ["Mulish"],
     },
   },
