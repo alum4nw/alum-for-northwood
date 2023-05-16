@@ -12,27 +12,27 @@
     font-family: "Mulish";
     font-weight: 600;
     font-display: swap;
-    src: url("../fonts/Mulish-SemiBold.ttf") format("truetype");
+    src: url("../fonts/Mulish-SemiBold.woff2") format("woff2");
   }
 
   @font-face {
     font-family: "Mulish";
     font-weight: 700;
     font-display: swap;
-    src: url("../fonts/Mulish-Bold.ttf") format("truetype");
+    src: url("../fonts/Mulish-Bold.woff2") format("woff2");
   }
 
   @font-face {
     font-family: "Noto Sans";
     font-weight: 400;
     font-display: swap;
-    src: url("../fonts/NotoSans-Regular.ttf") format("truetype");
+    src: url("../fonts/NotoSans-Regular.woff2") format("woff2");
   }
 
   @font-face {
     font-family: "Noto Sans";
     font-weight: 500;
     font-display: swap;
-    src: url("../fonts/NotoSans-Medium.ttf") format("truetype");
+    src: url("../fonts/NotoSans-Medium.woff2") format("woff2");
   }
 }
