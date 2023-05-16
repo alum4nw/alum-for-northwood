@@ -7,7 +7,7 @@ const Hero = () => {
   return (
     <div className="bg-blue-light pt-8">
       <div className="relative">
-        <div className="flex flex-col items-center animate-waving-hand">
+        <div className="flex flex-col items-center">
           <Clouds className="lg:w-full" />
         </div>
         <div className="absolute inset-0 text-center flex flex-col items-center justify-center pt-32 md:pt-36">
