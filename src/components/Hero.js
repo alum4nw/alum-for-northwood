@@ -5,21 +5,23 @@ import Clouds from "../svg/clouds.svg";
 
 const Hero = () => {
 
-  //clouds go offscreen; this makes overflow invisible
-  document.body.style.overflow = 'hidden';
+  if(typeof window !== 'undefined') {
+    //clouds go offscreen; this makes overflow invisible
+    document.body.style.overflow = 'hidden';
 
-  setTimeout(() => {
-    const initial_clouds = document.getElementById('initial-clouds');
-    const second_clouds = document.getElementById('second-clouds');
-    
-    //removes the initial wave of clouds once it's permanently offscreen
-    initial_clouds.classList.add('hidden');
-    initial_clouds.classList.remove('absolute');
+    setTimeout (() => {
+      const initial_clouds = document.getElementById('initial-clouds');
+      const second_clouds = document.getElementById('second-clouds');
+      
+      //removes the initial wave of clouds once it's permanently offscreen
+      initial_clouds.classList.add('hidden');
+      initial_clouds.classList.remove('absolute');
 
-    //makes the second wave of clouds visible
-    second_clouds.classList.add('absolute');
-    second_clouds.classList.remove('hidden');
-  }, 30000);
+      //makes the second wave of clouds visible
+      second_clouds.classList.add('absolute');
+      second_clouds.classList.remove('hidden');
+    }, 30000);
+  }
 
   return (
     <div className="bg-blue-light pt-8">
@@ -30,7 +32,7 @@ const Hero = () => {
         </div>
       <div className="relative">
         <Clouds className="invisible lg:w-full" />
-        <div className="absolute inset-0 text-center flex flex-col items-center justify-center pt-32 md:pt-36 my-[1422px]">
+        <div className="absolute inset-0 text-center flex flex-col items-center justify-center pt-32 md:pt-36">
           <h1 className="font-header font-bold text-sh1 px-3 md:text-th1 md:font-bold lg:text-h1 pb-6 leading-tight md:leading-none">
             ALUM for Northwood
           </h1>
