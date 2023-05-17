@@ -51,6 +51,22 @@ module.exports = {
       zIndex: {
         60: 60,
       },
+      animation: {
+        //clouds should start in the center of the screen
+        initialClouds: "initialDrift 30s linear forwards",
+        //clouds should drift in from offscreen
+        clouds: "drift 60s linear infinite",
+      },
+      keyframes: {
+        initialDrift: {
+          '0%': { transform: 'translateX(0px)' },
+          '100%': { transform: 'translateX(-1500px)' },
+        },
+        drift: {
+          '0%': { transform: 'translateX(1500px)' },
+          '100%': { transform: 'translateX(-1500px)' },
+        },
+      }
     },
     fontFamily: {
       body: ["Noto Sans"],
