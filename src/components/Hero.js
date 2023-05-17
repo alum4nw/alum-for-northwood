@@ -7,7 +7,7 @@ const Hero = () => {
 
   if(typeof window !== 'undefined') {
     //clouds go offscreen; this makes overflow invisible
-    document.body.style.overflow = 'hidden';
+    document.body.style.overflowX = 'hidden';
 
     setTimeout (() => {
       const initial_clouds = document.getElementById('initial-clouds');
